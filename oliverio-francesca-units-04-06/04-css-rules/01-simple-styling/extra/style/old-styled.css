@@ -1,0 +1,117 @@
+body {
+    background-image: url('../assets/images/bg-animated-sparkle.gif');
+    background-repeat: repeat;
+    background-color: #0000FF;
+    font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
+    text-align: center;
+    color: #FFFF00;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color: #0000FF;
+}
+
+a:visited {
+    color: #800080;
+}
+
+.main-content {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #000000;
+    border: 10px ridge #FF0000;
+    padding: 15px;
+}
+
+h1, h2 {
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: underline;
+    letter-spacing: normal;
+}
+
+h1 {
+    color: #FF00FF;
+    font-size: 48px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border: 5px solid #0000FF;
+    text-shadow: 3px 3px #00FF00;
+}
+
+h2 {
+    color: #00FFFF;
+}
+
+.intro-container, 
+.retro-container, 
+.modern-container, 
+.cta-container {
+    margin-bottom: 20px;
+    border: 6px outset #CCCCCC;
+    padding: 15px;
+    background-color: #C0C0C0;
+    color: #000000;
+}
+
+.intro-container {
+    font-weight: bold;
+    color: #000080;
+    font-size: 18px;
+}
+
+.retro-container {
+    background-color: #000080;
+    color: #FFFFFF;
+    border: 6px double #FFFFFF;
+}
+
+.retro-container h2 {
+    color: #00FF00;
+}
+
+.modern-container {
+    background-color: #FF0000;
+    color: #FFFF00;
+    border: 6px dashed #FFFF00;
+}
+
+.modern-container h2 {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.list {
+    text-align: left;
+    list-style-type: square;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+}
+
+.list li {
+    margin-bottom: 5px;
+}
+
+.cta-container {
+    background-color: #FFFFFF;
+    border: 4px dotted #000000;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #C0C0C0;
+    color: #0000FF;
+    font-family: "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 30px;
+    border: 5px outset #FFFFFF;
+    cursor: pointer;
+}
+
+.btn:active {
+    border: 5px inset #FFFFFF;
+    color: #FF0000;
+}

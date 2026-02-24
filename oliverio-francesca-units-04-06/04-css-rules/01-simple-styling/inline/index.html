@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Compatibility settings. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title on browser window. -->
+    <title>1.Simple styling inline</title>
+    <!-- Extra infos for search engines. -->
+    <meta name="description" content="Using inline CSS for styling an HTML file.">
+    <meta name="author" content="Francesca Oliverio">
+    <!-- Meta tags for sharing on socials. -->
+    <meta property="og:title" content="1.Simple styling">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.programmazioneweb.com/simple-styling/">
+    <meta property="og:description" content="Using inline CSS for styling an HTML file.">
+    <meta property="og:image" content="./assets/images/og-image.png">
+    <!-- Inline CSS - but import can only be done here. -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@700;900&family=Inter:wght@400;700&display=swap');</style>
+  </head>
+  <body style="background-color: #FFEEDD; color: #1a1a1a; font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.5; margin: 0; padding: 40px;">
+    <!-- Page content here. -->
+<section>
+      <h1 style="font-family: 'Chivo', system-ui, sans-serif; font-weight: 900; text-transform: uppercase; margin-top: 0; margin-bottom: 40px; letter-spacing: 1px; font-size: 3.5rem; border-bottom: 5px solid #000000; display: inline-block;">All about that style</h1>
+      <div style="background-color: #DD5533; color: #FFEEDD; padding: 25px; border: 2px solid #000000; box-shadow: 9px 6px 0px 0px #000000; margin-bottom: 40px; max-width: 800px; font-size: 1.2rem;">
+        <p>Do you remember those "very usable" and "pretty" websites that we used to navigate during the first years of the internet era?</p>
+        <p>Well, <em>I do</em>. I remember a time before Flexbox saved our souls. A time when "layout" meant nesting a table inside another table... inside another table.</p>
+      </div>
+      <div style="background-color: #DD88DD; padding: 25px; border: 2px solid #000000; box-shadow: 9px 6px 0px 0px #000000; margin-bottom: 40px; max-width: 800px;">
+        <h2 style="font-family: 'Chivo', system-ui, sans-serif; font-weight: 900; text-transform: uppercase; margin-top: 0; margin-bottom: 20px; letter-spacing: 1px;">&#128163; The "Golden Era" Starter Pack</h2>
+        <p>Back then, we didn't worry about "User Experience" or "Eye Strain." We had priorities. To build a true masterpiece in 1999, you simply <strong>had</strong> to include:</p>
+        <ul style="list-style-type: square; padding-left: 20px;">
+          <li style="margin-bottom: 10px; font-weight: 500; border-bottom: 2px solid #000000; padding-bottom: 5px;"><strong>The "Subtle" Background:</strong> Usually a tiling GIF of a starry galaxy, a matrix code rain, or a spinning skull on fire. Repeat-x? Repeat-y? Repeat-everything.</li>
+          <li style="margin-bottom: 10px; font-weight: 500; border-bottom: 2px solid #000000; padding-bottom: 5px;"><strong>The Color Palette of Doom:</strong> Neon Green text on a Hot Pink background. Contrast ratios specifically designed to give a graphic designer a panic attack.</li>
+          <li style="margin-bottom: 10px; font-weight: 500; border-bottom: 2px solid #000000; padding-bottom: 5px;"><strong>Fonts with Personality:</strong> Why use a readable sans-serif when you have <em>Comic Sans</em>, <em>Papyrus</em>, or <span style="font-family: 'Courier New', monospace;">Courier New</span>?</li>
+          <li style="margin-bottom: 10px; font-weight: 500; border-bottom: 2px solid #000000; padding-bottom: 5px;"><strong>The &lt;marquee&gt; tag:</strong> Because why should important text stand still when it can slowly scroll across the screen, making it impossible to read?</li>
+          <li style="margin-bottom: 10px; font-weight: 500; border-bottom: none; padding-bottom: 5px;"><strong>Under Construction GIFs:</strong> A little yellow digger animation to let visitors know you were "working on it" (spoiler: you never finished it).</li>
+        </ul>
+      </div>
+      <div style="background-color: #33AA55; color: white; padding: 25px; border: 2px solid #000000; box-shadow: 9px 6px 0px 0px #000000; margin-bottom: 40px; max-width: 800px;">
+        <h2 style="font-family: 'Chivo', system-ui, sans-serif; font-weight: 900; text-transform: uppercase; margin-top: 0; margin-bottom: 20px; letter-spacing: 1px;">&#127942; From Chaos to Hyperspace</h2>
+        <p>Today, navigating the web feels like a smooth journey through hyperspace. We have <strong>CSS Grid</strong>, consistent spacing, and dark modes that don't burn our retinas.</p>
+        <p>But sometimes... don't you miss the chaos? Don't you miss the glitter cursors?</p>
+      </div>
+      <div style="background-color: white; text-align: center; border: 6px dashed #000000; box-shadow: none; padding: 25px; margin-bottom: 40px; max-width: 800px;">
+        <p>If you feel brave enough to face the ghosts of the past, click below.</p>
+        <a href="../extra/old-styled.html" style="display: inline-block; background-color: #FFEE55; color: #000000; font-family: 'Chivo', sans-serif; font-weight: bold; text-transform: uppercase; text-decoration: none; font-size: 1.2rem; padding: 15px 30px; margin-top: 10px; border: 2px solid #000000; box-shadow: 9px 6px 0px 0px #000000; transition: transform 0.1s ease, box-shadow 0.1s ease;">
+          &#128640; Take me back to 1999 &rarr;
+        </a>
+      </div>
+    </section>
+    <!-- End of the body. -->
+    <!-- JS -->
+    <script defer src="./scripts/scripts.js"></script>
+  </body>
+</html>

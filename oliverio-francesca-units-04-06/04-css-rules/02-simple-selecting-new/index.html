@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Compatibility settings. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title on browser window. -->
+    <title>2. Simple Selecting</title>
+    <!-- Extra infos for search engines. -->
+    <meta name="description" content="A well styled HTML page with CSS rules and selectors.">
+    <meta name="author" content="Francesca Oliverio">
+    <!-- Meta tags for sharing on socials. -->
+    <meta property="og:title" content="2. Simple Selecting">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.programmazioneweb.com/simple-selecting/">
+    <meta property="og:description" content="A well styled HTML page with CSS rules and selectors.">
+    <meta property="og:image" content="./assets/images/me.webp">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/main.css?v=1.0">
+  </head>
+  <body>
+    <!-- Page content here. -->
+    <!-- *** Header *** -->
+    <header>
+      <h1>Florian Gadsby</h1>
+      <nav>
+        <ul>
+          <li><a href="#book">My Book</a></li>
+          <li><a href="#work">My Works</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr/>
+    <!-- *** Main *** -->
+    <main>
+      <!-- ***** Book Section ***** -->
+      <section id="book">
+        <h2>My Book</h2>
+        <p>Here you can find my new book! Click on the image to learn more.</p>
+        <figure>
+          <a href="https://www.floriangadsby.com/book" target="_blank">
+            <img src="./assets/images/paperback-final-mockup.webp" width="500em" alt="Image of the cover of my book: 'By My Hands'">
+          </a>
+          <figcaption>
+            <h4>My new book:</h4>
+            <strong><em>By My Hands</strong> A Potter's Apprenticeship</em>
+          </figcaption>
+        </figure>
+      </section>
+      <!-- ***** Work Section ***** -->
+      <section id="work">
+        <h2>My Works</h2>
+        <p>Look at some of my beautiful, unique creations.</p>
+        <table>
+          <thead>
+              <th>Tea Set</th>
+              <th>Mugs Tower</th>
+              <th>Inking Set</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="image-cell">
+                <div class="img-container">
+                  <img src="./assets/images/tea-set.webp" alt="Image displaying a handmade pottery tea set" loading="lazy">
+                </div>
+              </td>
+              <td class="image-cell">
+                <div class="img-container">
+                  <img src="./assets/images/mugs-tower.webp" alt="Image displaying some handmade mugs building a tower" loading="lazy">
+                </div>
+              </td>
+              <td class="image-cell">
+                <div class="img-container">
+                  <img src="./assets/images/inking-set.webp" alt="Image displaying a handmade pottery inking set" loading="lazy">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="item-description">
+                  What's included:
+                  <ol>
+                    <li>Milk pourer</li>
+                    <li>Sugar jar</li>
+                    <li>Mug</li>
+                    <li>Teapot</li>
+                  </ol>
+                </div>
+              </td>
+              <td>
+                <div class="item-description">
+                  You can choose:
+                  <ul>
+                    <li>Dimension</li>
+                    <li>Handle</li>
+                    <li>Shape</li>
+                    <li>Glaze</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="item-description">
+                  What's included:
+                  <ol>
+                    <li>Pen</li>
+                    <li>Ink jar</li>
+                    <li>Pen tray</li>
+                    <li>Small bowl </li>
+                  </ol>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Recommended Items:</h3>
+        <ol>
+          <li><ul>
+            <h4>Bud vase, dark green feldspathic crackle glaze</h4>
+            <img src="./assets/images/bud-vase.webp" alt="Picture of a bud vase, dark green feldspathic crackle glaze" width="150px">
+            <li>£150.00</li>
+            <li>Dimensions: 8.4 H x 8.5 W</li>
+            <li>Order <a href="https://www.floriangadsby.com/shop/small-bowl-blue-nuka-glaze">here</a></li>
+          </ul></li>
+          <li><ul>
+            <h4>Small angular bowl, dark green glaze</h4>
+            <img src="./assets/images/small-bowl.webp" alt="Picture of a small angular bowl, dark green glaze" width="150px">
+            <li>£65.00</li>
+            <li>Dimensions: 6.2 H x 10 W</li>
+            <li>Order <a href="https://www.floriangadsby.com/shop/small-angular-bowl-dark-green-glaze">here</a></li>
+          </ul></li>
+          <li><ul>
+            <h4>Small jar, dark green crackle glaze</h4>
+            <img src="./assets/images/small-jar.webp" alt="Picture of a small jar, dark green crackle glaze" width="150px">
+            <li>£125.00</li>
+            <li>Dimensions: 10.5 H x 5.2 W</li>
+            <li>Order <a href="https://www.floriangadsby.com/shop/small-jar-dark-green-crackle-glaze">here</a></li>
+          </ul></li>
+        </ol>
+      </section>
+      <!-- ***** About Section ***** -->
+      <section id="about">
+        <h2>About Me</h2>
+        <div>
+        <p>I’m a <strong>ceramicist, author and videographer</strong>, working in London, UK.</p>
+        <p>I’ve been documenting my work on <a href="http://www.instagram.com/floriangadsby" target="_blank"><em>Instagram</em></a> for the past 11 years, where I write about the processes involved in my craft and the ideas and discoveries I encounter along the way. I create tableware, one-off decorative and sculptural vessels and the rare commission. My ceramics are sold primarily through my online shop, unless stated otherwise but keep an eye out for exhibitions I’m often part of. Recently, I’ve started creating more in-depth videos on <a href="https://www.youtube.com/c/FlorianGadsbyCeramics" target="_blank"><em>YouTube</em></a>. These longer format films discuss process, my making philosophies and show how I throw and trim my pottery in much greater detail.</p>
+        <p>I’m also an author and in 2023 my first book, <a href="#book">‘By My Hands: A Potter’s Apprenticeship’</a> was published, more information about which you can find by <a href="#book">clicking here</a>.</p>
+        <p>If you've got any further queries please send me a message directly via my <a href="#contact">contact</a> page.</p>
+        </div>
+      </section>
+    </main>
+    <hr/>
+    <!-- *** Footer *** -->
+    <footer>
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <address>
+          <p>&#128205; <strong>Adress:</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Somewhere Street, 7 <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;London, UK</p>
+          <p>&#128231; <a href="mailto:hello@floriangadsby.com">Send me an email to keep in touch!</a></p>
+        </address>
+      </section>
+    </footer>
+    <!-- End of the body. -->
+    <!-- JS -->
+    <script defer src="./scripts/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Compatibility settings. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title on browser window. -->
+    <title>1.Simple styling embedded</title>
+    <!-- Extra infos for search engines. -->
+    <meta name="description" content="Using embedded CSS for styling an HTML file.">
+    <meta name="author" content="Francesca Oliverio">
+    <!-- Meta tags for sharing on socials. -->
+    <meta property="og:title" content="1.Simple styling">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.programmazioneweb.com/simple-styling/">
+    <meta property="og:description" content="Using embedded CSS for styling an HTML file.">
+    <meta property="og:image" content="./assets/images/og-image.png">
+    <!-- Embedded CSS -->
+    <style>
+        /* ----- Import (-> web font) ----- */
+        @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@700;900&family=Inter:wght@400;700&display=swap');
+
+        /* ----- Root (-> color palette) ----- */
+        :root {
+        --color-red: #DD5533;
+        --color-purple: #DD88DD;
+        --color-cream: #FFEEDD;
+        --color-green: #33AA55;
+        --color-yellow: #FFEE55;
+        --color-black: #1a1a1a; /* For text */
+        --border-black: #000000; /* For borders */
+        }
+
+        /* ----- Elements linked style ----- */
+        body {
+        background-color: var(--color-cream);
+        color: var(--color-black);
+        font-family: 'Inter', system-ui, -apple-system, sans-serif; /* Fallback UI */
+        line-height: 1.5;
+        margin: 0;
+        padding: 40px;
+        }
+
+        h1, h2, h3 {
+        font-family: 'Chivo', system-ui, sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        }
+
+        h1 {
+        font-size: 3.5rem;
+        border-bottom: 5px solid var(--border-black);
+        display: inline-block;
+        margin-bottom: 40px;
+        }
+
+        /* ----- Classes linked style ----- */
+        .padding-25 {
+            padding: 25px;
+        }
+
+        .bg-color-primary {
+            background-color: var(--color-red);
+        }
+
+        .text-color-light {
+            color: var(--color-cream);
+        }
+
+        /* Neobrutalist containers */
+
+        .neo-box, .btn {
+        border: 2px solid var(--border-black);
+        box-shadow: 9px 6px 0px 0px var(--border-black);
+        }
+
+        .intro-container, 
+        .retro-container, 
+        .modern-container, 
+        .cta-container {
+        margin-bottom: 40px;
+        max-width: 800px;
+        }
+
+        .intro-container {
+        font-size: 1.2rem;
+        }
+
+        .retro-container {
+        background-color: var(--color-purple);
+        }
+
+        .modern-container {
+        background-color: var(--color-green);
+        color: white;
+        }
+
+        .cta-container {
+        background-color: white;
+        text-align: center;
+        border: 6px dashed var(--border-black);
+        }
+
+        /* Underlined list */
+        .list {
+        list-style-type: square;
+        padding-left: 20px;
+        }
+
+        .list li {
+        margin-bottom: 10px;
+        font-weight: 500;
+        border-bottom: 2px solid var(--border-black);
+        padding-bottom: 5px;
+        }
+
+        .list li:last-child {
+        border-bottom: none;
+        }
+
+        /* Button */
+        .btn {
+        display: inline-block;
+        background-color: var(--color-yellow);
+        color: var(--border-black);
+        font-family: 'Chivo', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none; /* No standard link underline */
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        margin-top: 10px;
+        /* Transition */
+        transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        /* Button: Hover */
+        .btn:hover {
+        background-color: white;
+        transform: translate(-2px, -2px);
+        box-shadow: 9px 9px 0px 0px var(--border-black);
+        }
+
+        /* Button: Active */
+        .btn:active {
+        transform: translate(6px, 6px);
+        box-shadow: 0px 0px 0px 0px var(--border-black);
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Page content here. -->
+<section class="main-content">
+    <h1>All about that style</h1>
+    <div class="bg-color-primary text-color-light padding-25 intro-container neo-box">
+        <p>Do you remember those "very usable" and "pretty" websites that we used to navigate during the first years of the internet era?</p>
+        <p>Well, <em>I do</em>. I remember a time before Flexbox saved our souls. A time when "layout" meant nesting a table inside another table... inside another table.</p>
+    </div>
+    <div class="retro-container padding-25 neo-box">
+        <h2>&#128163; The "Golden Era" Starter Pack</h2>
+        <p>Back then, we didn't worry about "User Experience" or "Eye Strain." We had priorities. To build a true masterpiece in 1999, you simply <strong>had</strong> to include:</p>
+        <ul class="list">
+            <li><strong>The "Subtle" Background:</strong> Usually a tiling GIF of a starry galaxy, a matrix code rain, or a spinning skull on fire. Repeat-x? Repeat-y? Repeat-everything.</li>
+            <li><strong>The Color Palette of Doom:</strong> Neon Green text on a Hot Pink background. Contrast ratios specifically designed to give a graphic designer a panic attack.</li>
+            <li><strong>Fonts with Personality:</strong> Why use a readable sans-serif when you have <em>Comic Sans</em>, <em>Papyrus</em>, or <span style="font-family: 'Courier New', monospace;">Courier New</span>?</li>
+            <li><strong>The &lt;marquee&gt; tag:</strong> Because why should important text stand still when it can slowly scroll across the screen, making it impossible to read?</li>
+            <li><strong>Under Construction GIFs:</strong> A little yellow digger animation to let visitors know you were "working on it" (spoiler: you never finished it).</li>
+        </ul>
+    </div>
+    <div class="modern-container padding-25 neo-box">
+        <h2>&#127942; From Chaos to Hyperspace</h2>
+        <p>Today, navigating the web feels like a smooth journey through hyperspace. We have <strong>CSS Grid</strong>, consistent spacing, and dark modes that don't burn our retinas.</p>
+        <p>But sometimes... don't you miss the chaos? Don't you miss the glitter cursors?</p>
+    </div>
+    <!-- Back to the future -->
+    <div class="cta-container padding-25">
+        <p>If you feel brave enough to face the ghosts of the past, click below.</p>
+        <a href="../extra/old-styled.html" class="btn">
+          &#128640; Take me back to 1999 &rarr;
+        </a>
+    </div>
+</section>
+    <!-- End of the body. -->
+    <!-- JS -->
+    <script defer src="./scripts/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Compatibility settings. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title on browser window. -->
+    <title>3. Links and images</title>
+    <!-- Extra infos for search engines. -->
+    <meta name="description" content="A page with elements like images, line breaks, links...">
+    <meta name="author" content="Francesca Oliverio">
+    <!-- Meta tags for sharing on socials. -->
+    <meta property="og:title" content="3. Links and images">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.programmazioneweb.com/links-and-images/">
+    <meta property="og:description" content="A page with elements like images, line breaks, links...">
+    <meta property="og:image" content="./assets/images/me.webp">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/styles.css?v=1.0">
+  </head>
+  <body style="font-family: system-ui, sans-serif;">
+    <!-- Page content here. -->
+    <!-- *** Header *** -->
+    <header>
+      <h1>Florian Gadsby</h1>
+      <nav>
+        <ul>
+          <li><a href="#book">My Book</a></li>
+          <li><a href="#work">My Works</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr/>
+    <!-- *** Main *** -->
+    <main>
+      <!-- ***** Book Section ***** -->
+      <section id="book">
+        <h2>My Book</h2>
+        <p>Here you can find my new book! Click on the image to learn more.</p>
+        <figure>
+          <a href="https://www.floriangadsby.com/book" target="_blank">
+            <img src="./assets/images/paperback-final-mockup.webp" width="500em" alt="Image of the cover of my book: 'By My Hands'">
+          </a>
+          <figcaption>
+            <h4>My new book:</h4>
+            <strong><em>By My Hands</strong> A Potter's Apprenticeship</em>
+          </figcaption>
+        </figure>
+      </section>
+      <!-- ***** Work Section ***** -->
+      <section id="work">
+        <h2>My Works</h2>
+        <p>Look at some of my beautiful, unique creations.</p>
+        <h4>Tea Set</h4>
+        <img src="./assets/images/tea-set.webp" alt="Image displaying a handmade pottery tea set" height="300px" loading="lazy">
+        <h4>Mugs Tower</h4>
+        <img src="./assets/images/mugs-tower.webp" alt="Image displaying some handmade mugs building a tower" height="300px" loading="lazy">
+        <h4>Inking Set</h4>
+        <img src="./assets/images/inking-set.webp" alt="Image displaying a handmade pottery inking set" height="300px" loading="lazy">
+      </section>
+      <!-- ***** About Section ***** -->
+      <section id="about">
+        <h2>About Me</h2>
+        <div>
+        <p>I’m a <strong>ceramicist, author and videographer</strong>, working in London, UK.</p>
+        <p>I’ve been documenting my work on <a href="http://www.instagram.com/floriangadsby" target="_blank"><em>Instagram</em></a> for the past 11 years, where I write about the processes involved in my craft and the ideas and discoveries I encounter along the way. I create tableware, one-off decorative and sculptural vessels and the rare commission. My ceramics are sold primarily through my online shop, unless stated otherwise but keep an eye out for exhibitions I’m often part of. Recently, I’ve started creating more in-depth videos on <a href="https://www.youtube.com/c/FlorianGadsbyCeramics" target="_blank"><em>YouTube</em></a>. These longer format films discuss process, my making philosophies and show how I throw and trim my pottery in much greater detail.</p>
+        <p>I’m also an author and in 2023 my first book, <a href="#book">‘By My Hands: A Potter’s Apprenticeship’</a> was published, more information about which you can find by <a href="#book">clicking here</a>.</p>
+        <p>If you've got any further queries please send me a message directly via my <a href="#contact">contact</a> page.</p>
+        </div>
+      </section>
+    </main>
+    <hr/>
+    <!-- *** Footer *** -->
+    <footer id="contact">
+      <h2>Contact Me</h2>
+      <address style="font-style: normal;">
+        <p>&#128205; <strong>Adress:</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Somewhere Street, 7 <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;London, UK</p>
+        <p>&#128231; <a href="mailto:hello@floriangadsby.com">Send me an email to keep in touch!</a></p>
+      </address>
+    </footer>
+    <!-- End of the body. -->
+    <!-- JS -->
+    <script defer src="./scripts/scripts.js"></script>
+  </body>
+</html>
