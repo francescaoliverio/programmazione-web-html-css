@@ -34,7 +34,7 @@
         </ul>
       </nav>
     </header>
-    <hr/>
+    <hr>
     <!-- *** Main *** -->
     <main>
       <!-- ***** Book Section ***** -->
@@ -43,11 +43,11 @@
         <p>Here you can find my new book! Click on the image to learn more.</p>
         <figure>
           <a href="https://www.floriangadsby.com/book" target="_blank">
-            <img src="./assets/images/paperback-final-mockup.webp" width="500em" alt="Image of the cover of my book: 'By My Hands'">
+            <img src="./assets/images/paperback-final-mockup.webp" alt="Image of the cover of my book: 'By My Hands'">
           </a>
           <figcaption>
-            <h4>My new book:</h4>
-            <strong><em>By My Hands</strong> A Potter's Apprenticeship</em>
+            <h3>My new book:</h3>
+            <em><strong>By My Hands</strong> – A Potter's Apprenticeship</em>
           </figcaption>
         </figure>
       </section>
@@ -57,9 +57,11 @@
         <p>Look at some of my beautiful, unique creations.</p>
         <table>
           <thead>
+            <tr>
               <th>Tea Set</th>
               <th>Mugs Tower</th>
               <th>Inking Set</th>
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -117,28 +119,34 @@
           </tbody>
         </table>
         <h3>Recommended Items:</h3>
-        <ol>
-          <li><ul>
-            <h4>Bud vase, dark green feldspathic crackle glaze</h4>
-            <img src="./assets/images/bud-vase.webp" alt="Picture of a bud vase, dark green feldspathic crackle glaze" width="150px">
-            <li>£150.00</li>
-            <li>Dimensions: 8.4 H x 8.5 W</li>
-            <li>Order <a href="https://www.floriangadsby.com/shop/small-bowl-blue-nuka-glaze">here</a></li>
-          </ul></li>
-          <li><ul>
-            <h4>Small angular bowl, dark green glaze</h4>
-            <img src="./assets/images/small-bowl.webp" alt="Picture of a small angular bowl, dark green glaze" width="150px">
-            <li>£65.00</li>
-            <li>Dimensions: 6.2 H x 10 W</li>
-            <li>Order <a href="https://www.floriangadsby.com/shop/small-angular-bowl-dark-green-glaze">here</a></li>
-          </ul></li>
-          <li><ul>
-            <h4>Small jar, dark green crackle glaze</h4>
-            <img src="./assets/images/small-jar.webp" alt="Picture of a small jar, dark green crackle glaze" width="150px">
-            <li>£125.00</li>
-            <li>Dimensions: 10.5 H x 5.2 W</li>
-            <li>Order <a href="https://www.floriangadsby.com/shop/small-jar-dark-green-crackle-glaze">here</a></li>
-          </ul></li>
+        <ol id="recommended-items">
+          <li>
+            <ul>
+              <li>Bud vase, dark green feldspathic crackle glaze</li>
+              <li><img src="./assets/images/bud-vase.webp" alt="Picture of a bud vase, dark green feldspathic crackle glaze"></li>
+              <li>£150.00</li>
+              <li>Dimensions: 8.4 H x 8.5 W</li>
+              <li>Order <a href="https://www.floriangadsby.com/shop/small-bowl-blue-nuka-glaze">here</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Small angular bowl, dark green glaze</li>
+              <li><img src="./assets/images/small-bowl.webp" alt="Picture of a small angular bowl, dark green glaze"></li>
+              <li>£65.00</li>
+              <li>Dimensions: 6.2 H x 10 W</li>
+              <li>Order <a href="https://www.floriangadsby.com/shop/small-angular-bowl-dark-green-glaze">here</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Small jar, dark green crackle glaze</li>
+              <li><img src="./assets/images/small-jar.webp" alt="Picture of a small jar, dark green crackle glaze"></li>
+              <li>£125.00</li>
+              <li>Dimensions: 10.5 H x 5.2 W</li>
+              <li>Order <a href="https://www.floriangadsby.com/shop/small-jar-dark-green-crackle-glaze">here</a></li>
+            </ul>
+          </li>
         </ol>
       </section>
       <!-- ***** About Section ***** -->
@@ -152,14 +160,22 @@
         </div>
       </section>
     </main>
-    <hr/>
+    <hr>
     <!-- *** Footer *** -->
     <footer>
       <section id="contact">
         <h2>Contact Me</h2>
         <address>
-          <p>&#128205; <strong>Adress:</strong> <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Somewhere Street, 7 <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;London, UK</p>
-          <p>&#128231; <a href="mailto:hello@floriangadsby.com">Send me an email to keep in touch!</a></p>
+          <p>
+            &#128205; <strong>Address:</strong>
+            <span class="address-lines">
+              Somewhere Street, 7<br>
+              London, UK
+            </span>
+          </p>
+          <p>
+            &#128231; <a href="mailto:hello@floriangadsby.com">Send me an email to keep in touch!</a>
+          </p>
         </address>
       </section>
     </footer>

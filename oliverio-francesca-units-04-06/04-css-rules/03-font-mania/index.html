@@ -7,21 +7,91 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page title on browser window. -->
-    <title>My HTML Boilerplate</title>
+    <title>3.Font mania</title>
     <!-- Extra infos for search engines. -->
-    <meta name="description" content="A simple HTML5 Template with some interesting bonus meta elements.">
+    <meta name="description" content="Font styling exercise with different link behaviors.">
     <meta name="author" content="Francesca Oliverio">
     <!-- Meta tags for sharing on socials. -->
-    <meta property="og:title" content="My HTML Boilerplate">
+    <meta property="og:title" content="3.Font mania">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.programmazioneweb.com/my-html-boilerplate/">
-    <meta property="og:description" content="A simple HTML5 Template with some interesting bonus meta elements.">
-    <meta property="og:image" content="./assets/images/og-image.png">
+    <meta property="og:url" content="https://www.programmazioneweb.com/font-mania/">
+    <meta property="og:description" content="Font styling exercise with different link behaviors.">
+    <meta property="og:image" content="./assets/images/me.webp">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="./styles/styles.css?v=1.0">
+    <link rel="stylesheet" href="./styles/style.css?v=1.0">
   </head>
   <body>
     <!-- Page content here. -->
+    <!-- HEADER: title + NAVBAR -->
+    <header>
+      <h1>Florian Gadsby</h1>
+      <nav>
+        <ul>
+          <li><a href="#book">My Book</a></li>
+          <li><a href="#work">My Works</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr>
+    <main>
+      <!-- BOOK section -->
+      <section id="book">
+        <h2>My Book</h2>
+        <p>Here you can find my new book! Click on the image to learn more.</p>
+        <figure>
+          <a href="https://www.floriangadsby.com/book" target="_blank">
+            <img src="./assets/images/paperback-final-mockup.webp" alt="Book cover">
+          </a>
+          <figcaption>
+            <h4>My new book:</h4>
+            <strong><em>By My Hands</em></strong> A Potter's Apprenticeship
+          </figcaption>
+        </figure>
+      </section>
+      <!-- WORK section -->
+      <section id="work">
+        <h2>My Works</h2>
+        <p>Look at some of my beautiful, unique creations.</p>
+        
+        <h3>Recommended Items:</h3>
+        <ol>
+          <li>
+            <ul>
+              <h4>Bud vase</h4>
+              <li>£150.00</li>
+              <li>Order <a href="#">here</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <h4>Small angular bowl</h4>
+              <li>£65.00</li>
+              <li>Order <a href="#">here</a></li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+      <!-- ABOUT section -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I’m a ceramicist working in London.</p>
+        <p>I document my work on <a href="#">Instagram</a> and create longer videos on <a href="#">YouTube</a>.</p>
+        <p>More about my book <a href="#book">here</a>.</p>
+      </section>
+    </main>
+    <hr>
+    <!-- FOOTER: CONTACT section -->
+    <footer id="contact">
+      <h2>Contact Me</h2>
+      <address>
+        <p>London, UK</p>
+        <p><a href="mailto:hello@floriangadsby.com">Send me an email</a></p>
+      </address>
+    </footer>
     <!-- End of the body. -->
     <!-- JS -->
     <script defer src="./scripts/scripts.js"></script>
