@@ -10,6 +10,6 @@ Oliverio Francesca
   - Links inside paragraphs should have a google font and should not be red
   - Add a CSS rule to style your links using pseudo-classes
   - Group selectors for your links and other elements (DRY)
-Bonus:
-- Try to use many google fonts in a page and calculate the impact on the page
-loading time. Present your findings in a Doc file
+
+**Bonus:**
+- Try to use many google fonts in a page and calculate the impact on the page loading time. Present your findings in a Doc file
