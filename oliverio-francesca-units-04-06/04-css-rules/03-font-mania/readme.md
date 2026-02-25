@@ -13,3 +13,6 @@ Oliverio Francesca
 
 **Bonus:**
 - Try to use many google fonts in a page and calculate the impact on the page loading time. Present your findings in a Doc file
+
+# Solution
+The results of the bonus assignment are presented in the file 'google-fonts-loading-impact.pdf'
