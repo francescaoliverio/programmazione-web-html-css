@@ -6,7 +6,6 @@
   --color-primary: #0032A0;
   --color-primary-opacity: #0032A0aa;
   --color-accent: #E4002B;
-  --color-accent-hover: #c0001f;
   --color-light: #f4f6f9;
   --color-dark: #0a0a0a;
 }
@@ -76,7 +75,8 @@ h1:first-of-type {
 }
 
 #intro img {
-    width: 90vw;
+    width: 100%;
+    max-width: 2000px;
 }
 
 section {
