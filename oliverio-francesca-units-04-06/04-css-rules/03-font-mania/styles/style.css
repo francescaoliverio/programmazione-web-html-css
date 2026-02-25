@@ -1,24 +1,28 @@
 /* ----- Root (-> color palette) ----- */
 :root {
   --color-primary-opacity: #bbddccbb;
+  /*
   --color-primary: #bbddcc;
   --color-secondary: #669988;
-  --color-link: #bb7733;
-  --color-link-visited: #996622;
+  --color-link-hover: #335555;
+  */
+  --color-link: #446666;
   --color-light: #f0f3f2;
   --color-dark: #002211;
+  --color-red-links: #ee4444;
+  --color-red-links-hover: #da3333;
 }
 
 body {
   background-color: var(--color-light);
   color: var(--color-dark);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif; /* Fallback UI */
+  font-family: 'Raleway', Verdana, system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Chivo', system-ui, sans-serif;
+  font-family: 'Cormorant Garamond', Garamond, serif;
   font-weight: bold;
   margin: 0.25rem 0 0.75em 0;
 }
@@ -53,12 +57,25 @@ h6 {
 }
 
 a {
-  color: var(--color-link);
-  text-decoration: none;
+  color: var(--color-red-links);
+  font-weight: bold;
 }
 
 a:hover {
-  color: var(--color-link-visited);
+  color: var(--color-red-links-hover);
+}
+
+p a, li a {
+  color: var(--color-link);
+}
+
+p a {
+  font-family: 'Cormorant Garamond', Garamond, serif;
+  font-size: 1.15em;
+}
+
+li a {
+  font-family: 'Trebuchet MS', Verdana, sans-serif;
 }
 
 main, footer {
@@ -101,11 +118,11 @@ nav li {
   display: inline;
 }
 
-nav a, nav a:visited {
+nav a {
   padding: 0.5em;
   font-weight: bold;
+  text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-dark);
   transition: color 0.2s ease;
 }
 
@@ -136,7 +153,7 @@ img:hover {
 
 #book img {
   width: 80vw;
-  max-width: 1200px;
+  max-width: 600px;
   transform: none;
   transition: none;
   border: #00000000 solid 2px;
@@ -147,6 +164,7 @@ img:hover {
   border: var(--color-primary-opacity) solid 2px;
 }
 
+/*
 table {
   width: 80vw;
   min-width: 1000px;
@@ -186,6 +204,7 @@ td .img-container {
 td img {
   width: 100%;
 }
+*/
 
 #recommended-items ul {
   list-style: none;
@@ -204,11 +223,29 @@ li img {
   max-width: 1200px;
 }
 
+#contact>div {
+  display: inline-block;
+  vertical-align:top;
+}
+
+#contact>div:first-of-type {
+  margin: 0 2em 2em 0;
+}
+
 address {
   font-style: normal;
 }
 
 .address-lines {
-  display: block;
   padding-left: 1.5em;
+}
+
+#social span {
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  border: var(--color-red-links) 1px solid;
+  border-radius: 1em;
+  padding: 0.25em 0.5em;
+  margin: 0.5em;
 }
