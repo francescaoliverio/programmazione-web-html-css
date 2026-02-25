@@ -13,10 +13,8 @@ Oliverio Francesca
 - Result
   - Each style.css is different, because of the different resets, but
     - the result in the browser should look exactly the same for all 3 folders
-    - The result should also look the same in different browsers Chrome, Firefox, Edge,
-Safari
+    - The result should also look the same in different browsers Chrome, Firefox, Edge, Safari
 - Report
-  - Create a .txt or .doc or .md file in which you explain which method,
-reset/normalize/destyle, is easier to work with based on:
+  - Create a .txt or .doc or .md file in which you explain which method, reset/normalize/destyle, is easier to work with based on:
     - The length of the CSS that you had to write
     - The number of CSS rules that you had to override
