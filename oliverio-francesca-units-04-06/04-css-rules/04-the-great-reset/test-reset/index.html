@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Compatibility settings. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title on browser window. -->
+    <title>NASA - Astronaut Application Form | reset.css</title>
+    <!-- Extra infos for search engines. -->
+    <meta name="description" content="Submit this form to apply for one of our missions.">
+    <meta name="author" content="NASA">
+    <!-- Meta tags for sharing on socials. -->
+    <meta property="og:title" content="NASA - Astronaut Application Form">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nasa.com/astronaut-application-form/">
+    <meta property="og:description" content="Submit this form to apply for one of our missions.">
+    <meta property="og:image" content="https://www.nasa.gov/wp-content/uploads/2023/02/52429347904-5f371f6c1f-6k.jpeg">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/main.css?v=1.0">
+    <link rel="stylesheet" href="./style/range.css?v=1.0">
+  </head>
+  <body>
+    <!-- Page content here. -->
+    <!-- ***** Navbar ***** -->
+    <nav>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA Logo">
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#apply">Apply</a></li>
+      </ul>
+    </nav>
+    <!-- ***** Intro Section ***** -->
+    <section id="intro">
+      <h1>NASA - Astronaut Application Form</h1>
+      <img src="https://www.nasa.gov/wp-content/uploads/2023/02/52429347904-5f371f6c1f-6k.jpeg" alt="A person and an astronaut">
+    </section>
+    <!-- ***** Requirements Section ***** -->
+    <section id="requirements">
+      <h2>Mission Requirements</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Requirement</th>
+            <th>Minimum</th>
+            <th>Maximum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Age</td>
+            <td>18</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>Weight (kg)</td>
+            <td>37</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>Height (cm)</td>
+            <td>150</td>
+            <td>195</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- ***** Application Section ***** -->
+    <section id="apply">
+      <h2>Submit this form to apply for one of our missions.</h2>
+      <form action="https://webhook.site/4a5f04b9-5c4b-420e-8497-d32d8912b6b9" method="post" target="_blank" autocomplete="on">
+        <!-- ===== Candidate Name: first and last name required ===== -->
+        <fieldset>
+          <legend><h3>Astronaut Candidate Name</h3></legend>
+            <!-- First Name (required) -->
+            <div class="display-block">
+              <label for="firstname">First Name:</label>
+              <input type="text" id="firstname" name="firstname" required placeholder="Yuri">
+            </div>
+            <!-- Middle Name (optional) -->
+            <div class="display-block">
+              <label for="middlename">Middle Name:</label>
+              <input type="text" id="middlename" name="middlename" placeholder="(Optional)">
+            </div>
+            <!-- Last Name (required) -->
+            <div class="display-block">
+              <label for="lastname">Last Name:</label>
+              <input type="text" id="lastname" name="lastname" required placeholder="Gagarin">
+            </div>
+        </fieldset>
+        <!-- ===== Personal Characteristics: types used -> number, radio, color + datalist ===== -->
+        <fieldset>
+          <legend><h3>Personal Characteristics</h3></legend>
+          <!-- Age: number, integer from 18 to 100 -->
+          <div class="display-block">
+            <label for="age">Age (18-100):</label>
+            <input type="number" id="age" name="age" min="18" max="100" required>
+          </div>
+          <!-- Weight: number, float from 37 to 100, step 0.1 -->
+          <div class="display-block">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" min="37" max="100" step="0.1" placeholder="75.5">
+          </div>
+          <!-- Gender: radio button, default other -->
+          <div class="display-block">
+            <label>Gender:</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="other" name="gender" value="other" checked>
+            <label for="other">Other</label>
+          </div>
+          <!-- Colors: color selectors with some default options provided with datalist -->
+          <div class="display-block">
+            <label for="haircolor">Hair Color:</label>
+            <input type="color" id="haircolor" name="haircolor" list="standard-colors" value="#775555">
+          </div>
+          <div class="display-block">
+            <label for="eyecolor">Eye Color:</label>
+            <input type="color" id="eyecolor" name="eyecolor" list="standard-colors" value="#5599ee">
+            <datalist id="standard-colors">
+              <option value="#775599">Purple</option>
+              <option value="#5599ee">Blue</option>
+              <option value="#339955">Green</option>
+              <option value="#aa9955">Blonde</option>
+              <option value="#aa5533">Red</option>
+              <option value="#755555">Brown</option>
+              <option value="#553333">Dark Brown</option>
+              <option value="#000000">Black</option>
+              <option value="#777777">Grey</option>
+              <option value="#FFFFFF">White</option>
+            </datalist>
+          </div>
+        </fieldset>
+        <!-- ===== Contact information: types used -> email, tel ===== -->
+        <fieldset>
+          <legend><h3>Contact Information</h3></legend>
+          <div class="display-block">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="me@nasa.gov">
+          </div>
+          <div class="display-block">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" minlength="9" maxlength="10" placeholder="1234567890" pattern="[0-9]{9,10}" title="Please enter a 9 or 10 digit number">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><h3>About You</h3></legend>
+          <!-- ===== Biography: types used -> text area ===== -->
+          <div class="display-block">
+            <label for="bio"><strong>Short Biography</strong> (max 255 chars):</label><p></p>
+            <textarea id="bio" name="bio" rows="4" cols="50" maxlength="255" placeholder="Tell us why you belong in space..."></textarea>
+          </div>
+          <!-- ===== Select Mission: default not selectable ===== -->
+          <div class="display-block">
+            <label for="mission"><strong>Desired Mission:</strong></label>
+            <select id="mission" name="mission" required>
+              <option value="" disabled selected>- Select an option -</option>
+              <option value="europa_clipper">Europa Clipper (Jupiter's Moon)</option>
+              <option value="psyche">Psyche (Metal-Rich Asteroid)</option>
+              <option value="dragonfly">Dragonfly (Titan)</option>
+              <option value="artemis">Artemis (Return to Moon)</option>
+              <option value="mars_sample_return">Mars Sample Return</option>
+              <option value="spherex">SPHEREx (Origins of Universe)</option>
+              <option value="cadre">CADRE (Lunar Mapping)</option>
+            </select>
+          </div>
+        </fieldset>
+        <!-- ===== Bonus: types used -> range slider + output (oninput -> changes output with js) ===== -->
+        <div class="display-block">
+          <label for="readiness"><em>Ready to blast off?</em> (0-100%):</label>
+          <input type="range" id="readiness" name="readiness" min="0" max="100" step="1" value="50" oninput="this.nextElementSibling.value = this.value; this.style.setProperty('--range-value', this.value + '%')">
+          <output>50</output><span id="percentage">%</span>
+        </div>
+        <!-- ===== Reset + Submit buttons ===== -->
+        <div class="display-block">
+          <button type="reset">Clear Form</button>
+          <button type="submit">Submit Application</button>
+        </div>
+      </form>
+      <hr/>
+      <p><i>Thank you for your application!</i></p>
+    </section>
+    <!-- End of the body. -->
+    <!-- JS (shouldn't be embedded, but just for this time)-->
+    <script>
+      /* To manage the element #readiness filling when you reset the form */
+      document.querySelector('form').addEventListener('reset', function() {
+        const range = document.getElementById('readiness');
+        range.style.setProperty('--range-value', '50%');
+      });
+    </script>
+  </body>
+</html>

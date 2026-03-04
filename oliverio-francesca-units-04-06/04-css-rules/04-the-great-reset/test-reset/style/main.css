@@ -1,0 +1,228 @@
+/* ----- Google Fonts ----- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Public+Sans:wght@400;700&display=swap');
+
+/* ----- Root ----- */
+:root {
+  --color-primary: #0032A0;
+  --color-primary-opacity: #0032A0aa;
+  --color-accent: #E4002B;
+  --color-light: #f4f6f9;
+  --color-dark: #0a0a0a;
+}
+
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-family: 'Public Sans', Verdana, systrem-ui, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ----- Headings ----- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', systrem-ui, sans-serif;
+  font-weight: bold;
+  margin: 0.25rem 0 0.75rem 0;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.25rem; }
+
+/* ----- Nav ----- */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-primary);
+  z-index: 10;
+}
+
+nav img {
+  height: 2.5rem;
+  vertical-align: middle;
+  margin: 0.5rem 1rem;
+}
+
+nav ul {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+/* ----- Sections ----- */
+h1:first-of-type {
+    margin-top: 2rem;
+}
+
+#intro img {
+    width: 100%;
+    max-width: 2000px;
+}
+
+section {
+  padding: 1rem 4rem;
+}
+
+/* ----- Table ----- */
+table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--color-primary-opacity);
+}
+
+/* ----- Form ----- */
+fieldset {
+  border: 1px solid var(--color-primary-opacity);
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+legend h3 {
+  color: var(--color-primary);
+}
+
+.display-block {
+  display: block;
+  padding: 0.4rem;
+}
+
+label {
+  vertical-align: middle;
+  padding: 0 0.4rem;
+}
+
+input, textarea, select {
+  border: 1px solid var(--color-primary-opacity);
+  padding: 0.4rem;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border: 1px solid var(--color-accent);
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border: 1px solid var(--color-primary);
+  border-radius: 0;
+  vertical-align: middle;
+}
+
+input[type="radio"]:checked {
+  background: var(--color-primary);
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 3px;
+  width: 2rem;
+  height: 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 0;
+  background: white;
+  vertical-align: middle;
+}
+
+select {
+  background-color: white;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: none;
+}
+
+/* ----- Buttons ----- */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+}
+
+button[type="submit"] {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-accent);
+}
+
+button[type="reset"] {
+  background-color: white;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  margin-right: 0.5rem;
+}
+
+button[type="reset"]:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ----- Links ----- */
+a {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+hr {
+  border: none;
+  border-top: 2px solid var(--color-primary-opacity);
+  margin: 2rem auto;
+  width: 80vw;
+}

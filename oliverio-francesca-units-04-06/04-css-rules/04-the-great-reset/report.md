@@ -34,7 +34,7 @@ Niente: reset non gestisce quasi nulla dei form elements, quindi il mio CSS rima
 2. `input, textarea, select { font-family: inherit; font-size: inherit; }`
 3. `button { font-family: inherit; font-size: inherit; cursor: pointer; }`
 4. `input[type="radio/color"] { -webkit-appearance: none; appearance: none; border-radius: 0; }`
-5. `input[type="range"] { -webkit-appearance: none; appearance: none; background: transparent; border: none; }`
+5. `input[type="range"] { -webkit-appearance: none; appearance: none; background: transparent; }`
 
 ### Considerazioni
 - Ha **210 righe** e parte da una base già consistente cross-browser
@@ -45,11 +45,11 @@ Niente: reset non gestisce quasi nulla dei form elements, quindi il mio CSS rima
 
 ## Con quale mi sono trovata meglio
 
-**destyle.css** è stato il più comodo da usare per questo progetto, per due motivi:
+- **destyle.css** è stato il più comodo da usare per questo progetto, per due motivi:
 
-1. **Meno CSS** — le righe ridondanti da togliere sono state 6 dichiarazioni tra range, radio e color input, più le property condivise di button e form elements
-2. **Meno override** — destyle azzera già tutto, quindi ogni mia regola è una scelta intenzionale, non una correzione di un default incoerente del browser
+  1. **Meno CSS** — le righe ridondanti da togliere sono state 6 dichiarazioni tra range, radio e color input, più le property condivise di button e form elements
+  2. **Meno override** — destyle azzera già tutto, quindi ogni mia regola è una scelta intenzionale, non una correzione di un default incoerente del browser
 
-**normalize.css** è stato il secondo più comodo: ho tolto meno righe rispetto a destyle, ma non ho avuto conflitti da gestire. Dall'altra parte, buona parte dello stile che ridefinisce per rendere coerente il css fra diversi browser verrà spesso overrided, visto che verosimilmente nessun designer vorrà un sito con aspetto così "basic".
+- **normalize.css** è stato il secondo più comodo: ho tolto meno righe rispetto a destyle, ma non ho avuto conflitti da gestire. Dall'altra parte, buona parte dello stile che ridefinisce per rendere coerente il css fra diversi browser verrà spesso overrided, visto che verosimilmente nessun designer vorrà un sito con aspetto così "basic".
 
-**reset.css** è stato il meno comodo: non gestisce nulla dei form elements moderni, quindi ho dovuto scrivere tutto da zero. In compenso è il più leggero (2KB vs 6KB), anche se si tratta di una differenza che penso sia trascurabile, rispetto al rapporto risparmio/beneficio, dovendo comunque gestire io la maggior parte dello stile.
+- **reset.css** è stato il meno comodo: non gestisce nulla dei form elements moderni, quindi ho dovuto scrivere tutto da zero. In compenso è il più leggero (2KB vs 6KB), anche se si tratta di una differenza che penso sia trascurabile, rispetto al rapporto risparmio/beneficio, dovendo comunque gestire io la maggior parte dello stile.

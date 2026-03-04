@@ -1,0 +1,81 @@
+/* ----- Label ----- */
+label[for="readiness"] {
+    display: block;
+    padding: 0.5em;
+}
+
+/* ----- Range Input ----- */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50%;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+/* Track - webkit (Chrome, Safari, Edge) */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 1em;
+  background: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary) var(--range-value, 50%),
+    white var(--range-value, 50%),
+    white 100%
+  );
+  border: 1px solid var(--color-primary);
+}
+
+/* Track - Firefox */
+input[type="range"]::-moz-range-track {
+  height: 1em;
+  background: white;
+  border: 1px solid var(--color-primary);
+}
+
+/* Parte piena - Firefox */
+input[type="range"]::-moz-range-progress {
+  height: 1em;
+  background: var(--color-primary);
+}
+
+/* Thumb - webkit */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  margin-top: -0.5em;
+  border-radius: 50%;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* Thumb - Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 2em;
+  height: 2em;
+  border: none;
+  border-radius: 50%;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* ----- Output ----- */
+output, #percentage {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1em 0.25em;
+  color: var(--color-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: bold;
+}
