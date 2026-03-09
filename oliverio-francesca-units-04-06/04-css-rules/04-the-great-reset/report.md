@@ -8,6 +8,7 @@ Niente: reset non gestisce quasi nulla dei form elements, quindi il mio CSS rima
 ### Considerazioni
 - Reset ha solo **48 righe** ma mi ha lasciato il lavoro più pesante
 - Ho dovuto scrivere tutto da zero: appearance, font, margin, padding...
+- Ho dovuto aggiungere alcune regole, perché reset applica `font: inherit` a th, strong, em, i — perdono `font-weight: bold` per `th` e `strong` e `font-style: italic` per `em` e `i`. 
 
 ---
 
@@ -40,6 +41,7 @@ Niente: reset non gestisce quasi nulla dei form elements, quindi il mio CSS rima
 - Ha **210 righe** e parte da una base già consistente cross-browser
 - È l'unico dei tre che resetta la maggior parte dei principali attributi sui form elements
 - Usa `box-sizing: border-box` su `*` (meglio per UI)
+- Ho dovuto aggiungere (ma è meglio: meno dato per scontato, più coerenza e controllo) alcune cose come background color su input/textarea, che destyle rende transparent
 
 ---
 

@@ -29,6 +29,9 @@ h1 { font-size: 3rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.25rem; }
 
+strong,b { font-weight: bold; }
+em, i {font-style: italic; }
+
 /* ----- Nav ----- */
 nav {
   position: fixed;
@@ -120,6 +123,12 @@ legend h3 {
 label {
   vertical-align: middle;
   padding: 0 0.4rem;
+  line-height: 1.15rem;
+}
+
+textarea {
+  display: block;
+  margin-top: 1em;
 }
 
 input, textarea, select {
