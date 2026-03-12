@@ -1,0 +1,66 @@
+body {
+  padding: 1em 2em;
+  background-color: antiquewhite;
+  font-family:  system-ui, -apple-system, sans-serif;
+}
+td {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+
+/* Italy */
+#italy tr :nth-child(-n + 3) {
+  background-color: green;
+}
+#italy tr :nth-last-child(-n + 3) {
+  background-color: red;
+}
+
+/* USA */
+#USA tr:nth-of-type(2n + 1) td {
+  background-color: red;
+}
+#USA tr:nth-of-type(-n + 4) :nth-child(-n + 4) {
+  background-color: blue;
+}
+#USA tr:nth-of-type(-2n + 3) :nth-child(-2n + 3)::before,
+#USA tr:nth-of-type(-2n + 4) :nth-child(-2n + 4)::before {
+  content: "*";
+  color: white;
+}
+
+/* Bonus */
+#bonus h1::after {
+    content: " ♥ Hover me! ♥";
+  display: block;
+  color: deeppink;
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: underline wavy;
+}
+#bonus table td {
+  transition: background-color 0.2s ease;
+}
+#bonus tr:nth-of-type(2n + 1) :nth-child(2n + 1),
+#bonus tr:nth-of-type(2n) :nth-child(2n) {
+  background-color: black;
+}
+#bonus table:hover tr:first-child td {
+  background-color: orangered;
+}
+#bonus table:hover tr:nth-of-type(2) td {
+  background-color: darkorange;
+}
+#bonus table:hover tr:nth-of-type(3) td {
+  background-color: gold;
+}
+#bonus table:hover tr:nth-of-type(4) td {
+  background-color: limegreen;
+}
+#bonus table:hover tr:nth-of-type(5) td {
+  background-color: dodgerblue;
+}
+#bonus table:hover tr:last-child td {
+  background-color: darkorchid;
+}

@@ -1,0 +1,33 @@
+body {
+  padding: 1em 2em;
+  background-color: antiquewhite;
+  font-family:  system-ui, -apple-system, sans-serif;
+}
+thead {
+  color: white;
+  background-color: mediumpurple;
+}
+th, td {
+  padding: 10px;
+}
+tbody {
+  background-color: white;
+}
+/*
+tbody tr:nth-child(2n+1) {
+  background-color: lightgrey;
+}
+*/
+tbody tr:nth-child(4n+1),
+tbody tr:nth-child(4n+2) {
+  background-color: lightgrey;
+}
+tbody tr:hover {
+  background-color: lavender;
+}
+thead tr:hover {
+  background-color: slateblue;
+}
+table tr {
+  transition: all 0.1s ease;
+}
