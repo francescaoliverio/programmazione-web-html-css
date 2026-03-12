@@ -122,6 +122,11 @@ label {
   padding: 0 0.4rem;
 }
 
+textarea {
+  display: block;
+  margin-top: 1em;
+}
+
 input, textarea, select {
   border: 1px solid var(--color-primary-opacity);
   padding: 0.4rem;
