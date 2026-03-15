@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap");
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 600;
+  font-size: 1em;
   background-color: DarkSlateGray;
   color: DarkSlateBlue;
   line-height: 1.5;
@@ -24,6 +27,8 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  padding: 20px;
+  max-width: 50vh;
 }
 
 header {
@@ -45,7 +50,6 @@ aside {
   position: sticky;
   top: 0;
   height: 100vh;
-
 }
 
 footer {
@@ -91,7 +95,7 @@ aside div {
 }
 
 #logo {
-  font-family: 'Abril Fatface', serif;
+  font-family: "Abril Fatface", serif;
   font-size: 28px;
   background-color: SandyBrown;
   color: DarkSlateBlue;
@@ -100,7 +104,7 @@ aside div {
 }
 
 .nav-link {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   display: inline-block;
   margin: 10px;
   padding: 8px 16px;
@@ -140,10 +144,9 @@ aside img {
 }
 
 .highlight {
-  background-color: SandyBrown;
-  color: DarkSlateBlue;
-  padding: 1px 6px;
-  border-radius: 6px;
+  background-color: DarkSlateBlue;
+  color: SandyBrown;
+  padding: 2px;
   cursor: pointer;
 }
 
@@ -153,13 +156,13 @@ aside img {
 }
 
 .special {
-  color: Coral;
+  color: PaleVioletRed;
   font-weight: 700;
 }
 
 .outlined {
-  border-bottom: 2px solid SeaGreen;
-  color: SeaGreen;
+  border-bottom: 2px solid DarkSlateGray;
+  color: DarkSlateGray;
   padding-bottom: 1px;
 }
 
