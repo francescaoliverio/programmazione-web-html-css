@@ -1,0 +1,235 @@
+:root {
+  --font-family-headings: "Oswald", Impact, "Arial Narrow Bold", sans-serif;
+  --font-family-content: "Special Elite", "Courier New", Courier, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  width: 80vw;
+  margin: 0 auto;
+}
+/* Tipography */
+p {
+  font-family: var(--font-family-content);
+  font-style: normal;
+  font-weight: 400;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-normal {
+  font-weight: 500;
+}
+.font-bold {
+  font-weight: 700;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headings);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  text-wrap: balance;
+}
+h2:not(:only-child),
+h1:not(:only-child),
+h3:not(:only-child),
+h4:not(:only-child),
+h5:not(:only-child),
+h6:not(:only-child),
+p:not(:last-child),
+hr:not(:last-child) {
+  margin-bottom: 1em;
+}
+h1,
+h3,
+h5 {
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.9rem;
+}
+h6 {
+  font-size: 0.75rem;
+}
+/* Nav */
+nav {
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding: 0.5rem 1.5rem;
+  background-color: #eee;
+}
+
+nav * {
+  display: inline-block;
+}
+nav>div {
+    width: 20%;
+}
+nav a {
+  font-family: var(--font-family-headings);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+nav a::before {
+    content: "🔗 ";
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+/* Header */
+header {
+  background-color: white;
+  width: 100%;
+}
+header > * {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 1rem 1%;
+}
+header > aside {
+  width: 20%;
+  font-size: 80%;
+  min-width: 6rem;
+}
+header > #logo {
+  width: 50%;
+  min-width: 16rem;
+  padding: auto;
+}
+.outlined {
+  border: 1px solid #000;
+  padding: 0.5em 1em;
+}
+/* Copyright */
+#copyright {
+  font-size: 60%;
+  text-align: center;
+  margin-top: 1em;
+}
+/* Newspaper details */
+section#newspaper-details {
+  width: 100%;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #000;
+  background-color: #edb3;
+}
+section#newspaper-details > * {
+  display: inline-block;
+  font-size: 80%;
+  width: 32%;
+  padding: 1.5%;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+section#newspaper-details > :first-child {
+  text-align: left;
+}
+section#newspaper-details > :last-child {
+  text-align: right;
+}
+/* Content wrapper (for the news) */
+#content-wrapper {
+  width: 100%;
+  background-color: #fcfaf9;
+}
+/* Clearfix: creates an empty element that forces the wrapper to actually wrap the floating children */
+#content-wrapper::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* Main (structure) */
+main {
+  float: right;
+  width: 70%;
+  padding: 1.5rem;
+}
+/* Aside (structure) */
+body > div > aside {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  float: left;
+  width: 30%;
+  height: 100%;
+  padding: 1.5rem;
+  border-right: 1px solid #000;
+}
+/* Content (news) */
+body > div > aside img {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+#headline-news {
+  border-bottom: 3px double #000;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+#headline-news img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#secondary-news img {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+#secondary-news article:nth-of-type(2n) h2 {
+  font-style: italic;
+}
+table {
+  border-collapse: collapse;
+}
+#secondary-news td {
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: #000;
+}
+#secondary-news td:first-of-type,
+#secondary-news td:last-of-type {
+  border: none;
+}
+#secondary-news article {
+  padding: 1rem;
+}
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fcfaf9;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+}
+/* Background color */
+aside {
+  background-color: #edb3;
+}
