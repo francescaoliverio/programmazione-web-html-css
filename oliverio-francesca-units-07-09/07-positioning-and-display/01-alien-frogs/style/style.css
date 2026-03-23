@@ -1,0 +1,112 @@
+/* === Alien Frogs ===
+ * 
+ * CSS transforms the simple divs in alien frogs
+ * Each div is a frog: red or green (type), round corners, border
+ * Each frog has 2 eyes: using ::before and ::after pseudoelements
+ * When the frog is hovered, the eyes should turn black (white text
+ * 
+ */
+
+/* --- General settings --- */
+*, *::before, *::after {
+    box-sizing: inherit;
+    text-align: center;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+/* --- Body --- */
+body {
+    background-color:beige;
+    padding: 1em;
+}
+
+/* --- Page header --- */
+body::before {
+    display: block;
+    content: "Alien Frogs!";
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* --- Shape --- */
+.frog {
+    display: inline-block;
+    margin: 50px;
+    padding: 5px;
+    width: 160px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.frog.small {
+    padding: 1px;
+    width: 70px;
+    height: 35px;
+}
+/* --- Eyes --- */
+.frog::before, .frog::after {
+    content: "O"; /* the eye ball */
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+.frog.small::before, .frog.small::after {
+    padding: 2.5px;
+    width: 25px;
+    height: 25px;
+    font-size: 90%;
+}
+
+/* --- Eyes position --- */
+.frog::before {
+    top: -20px;
+    left: -60px;
+}
+.frog::after {
+    top: -20px;
+    right: -60px;
+}
+.frog.small::before {
+    top: -15px;
+    left: -20px;
+}
+.frog.small::after {
+    top: -15px;
+    right: -20px;
+}
+
+/* --- Frogs colors --- */
+.type1 {
+    background-color: hsl(90, 60%, 50%);
+}
+.frog.type1::before, .frog.type1::after {
+    background-color: hsl(90, 60%, 80%);
+}
+.frog.small.type1::before, .frog.small.type1::after {
+    background-color: hsl(90, 60%, 40%);
+    color: white;
+}
+.type2 {
+    background-color: hsl(20, 100%, 50%);
+}
+.frog.type2::before, .frog.type2::after {
+    background-color: hsl(20, 100%, 80%);
+}
+.frog.small.type2::before, .frog.small.type2::after {
+    background-color: hsl(20, 100%, 40%);
+    color: white;
+}
+/* Black eye when hovered frog */
+.frog.frog:hover::before, .frog.frog:hover::after {
+    background-color: black;
+    color: white;
+}
