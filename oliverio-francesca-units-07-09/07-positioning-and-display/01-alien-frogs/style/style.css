@@ -6,6 +6,7 @@
  * When the frog is hovered, the eyes should turn black (white text
  * 
  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;900&display=swap');
 
 /* --- General settings --- */
 *, *::before, *::after {
@@ -15,22 +16,29 @@
 
 html {
     box-sizing: border-box;
-    font-family: sans-serif;
-    font-weight: lighter;
 }
 
 /* --- Body --- */
 body {
-    background-color:beige;
     padding: 1em;
+    background-color:beige;
 }
 
 /* --- Page header --- */
 body::before {
     display: block;
-    content: "Alien Frogs!";
-    font-size: 1.25rem;
-    font-weight: bold;
+    content: "ALIEN FROGS!";
+    font-family: "Poppins", sans-serif;
+    letter-spacing: -14px;
+    line-height: 70%;
+    font-size: 10rem;
+    font-weight: 900;
+    width: min-content;
+    /* `background-content: clip` shows the background image (fallback: black) through the text */
+    background: black url(https://i.natgeofe.com/k/8fa25ea4-6409-47fb-b3cc-4af8e0dc9616/red-eyed-tree-frog-on-leaves-3-2_3x4.jpg);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
 }
 
 /* --- Shape --- */
@@ -50,7 +58,10 @@ body::before {
 }
 /* --- Eyes --- */
 .frog::before, .frog::after {
-    content: "O"; /* the eye ball */
+    content: "o"; /* the eye ball */
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 100%;
     display: inline-block;
     position: relative;
     padding: 5px;
