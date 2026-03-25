@@ -50,6 +50,7 @@ body::before {
     height: 60px;
     border-radius: 5px;
     border: 1px solid black;
+    position: relative;
 }
 .frog.small {
     padding: 1px;
@@ -63,7 +64,7 @@ body::before {
     font-weight: 300;
     line-height: 100%;
     display: inline-block;
-    position: relative;
+    position: absolute;
     padding: 5px;
     width: 30px;
     height: 30px;
@@ -80,19 +81,19 @@ body::before {
 /* --- Eyes position --- */
 .frog::before {
     top: -20px;
-    left: -60px;
+    left: -20px;
 }
 .frog::after {
     top: -20px;
-    right: -60px;
+    right: -20px;
 }
 .frog.small::before {
     top: -15px;
-    left: -20px;
+    left: -15px;
 }
 .frog.small::after {
     top: -15px;
-    right: -20px;
+    right: -15px;
 }
 
 /* --- Frogs colors --- */
