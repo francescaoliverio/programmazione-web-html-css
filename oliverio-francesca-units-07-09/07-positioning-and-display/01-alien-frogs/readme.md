@@ -31,3 +31,5 @@ Explanation of my CSS:
 6. Colors are set according to the DRY principle, using cascading and specificity. I decided to set colors with hsl method so that I could keep the same hue while changing the saturation and lightness for brighter/darker colors
 7. The hover effect on the eyes was quite tricky to reach: `.frog:hover` selects the hovered frog divs, while `.frog::before/::after` selects the ::before/::after pseudoelements in the frog divs. So `.frog:hover::before/::after`should be enough.  
 But for a matter of specificity, this doesn't apply the rule to small frogs, as the rule for small frogs eyes background color has specificity 1-3-0. So I decided to write twice the class selector `.frog`, in order to have the needed specificity on the hovering rule to override the previous one. This brings us to `.frog.frog:hover::before, .frog.frog:hover::after`
+
+Extra: I changed the heading to experiment with background properties.
