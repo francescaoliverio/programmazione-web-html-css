@@ -1,47 +1,95 @@
+/* style.css
+ *
+ * Header and footer sticky/fixed at top and bottom.
+ * Sidebar (float) takes full viewport height.
+ * Columns float on the right side.
+ */
+
+
+/* Import font Poppins: 300,400,900 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;900&display=swap');
 
+/* ----- General fixes ----- */
+/* Fix default values of browser user-agent stylesheet */
 *, *::before, *::after {
   box-sizing: inherit;
   margin: 0;
 }
-
+/* Box-sizing and font family */
 html {
   box-sizing: border-box;
+}
+/* Clearfix for floating columns (to make the body wrap around the column height) */
+body::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ----- Typography ----- */
+p {
+  margin: 1em 0;
+}
+html {
   font-family: "Poppins", sans-serif;
 }
 
+/* ----- Header and footer ----- */
 header, footer {
-  position: fixed;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
   background-color: slateblue;
   color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
 }
-
+/* Sticky header, so that it stays in the page flow, but stays fixed to the top */
 header {
   position: sticky;
   top: 0;
 }
-
+/* Fixed footer at the bottom of the page (hides content that goes under it) */
 footer {
   position: fixed;
   bottom: 0;
 }
 
+/* ----- Sidebar and columns ----- */
+/* Sidebar and columns take at least the height of the viewport minus the header */
 aside, .column {
   padding: 20px;
   min-height: calc(100vh - 130px);
+  min-width: min-content;
 }
-
+/* Sidebar fixed floating on the left side */
 aside {
   background-color:cornflowerblue;
   color: white;
   float: left;
   width: 20%;
+  position: fixed;
 }
+/* Columns start from the right side of the page */
 .column {
   float: right;
   width: 40%;
+}
+/* Sets left and right borders for even columns */
+.column:nth-child(2n) {
   border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+/* Bottom margin to avoid the content to be hidden by the fixed footer */
+.column>:last-child {
+  margin-bottom: 5em;
+}
+
+/* ----- Images ----- */
+img {
+  width: 80%;
+}
+figcaption {
+  font-size: 80%;
+  font-style: italic;
+  font-weight: 300;
+  margin: 1em;
 }
