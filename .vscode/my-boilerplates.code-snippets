@@ -1,0 +1,66 @@
+{
+	"My HTML Boilerplate": {
+		"scope": "html",
+		"prefix": "myhtmlboilerplate",
+		"description": "My complete HTML5 Boilerplate",
+		"body": [
+			"<!DOCTYPE html>",
+			"",
+			"<html lang=\"en\">",
+			"  <head>",
+			"    <!-- Compatibility settings. -->",
+			"    <meta charset=\"utf-8\">",
+			"    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
+			"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"    <!-- Page title on browser window. -->",
+			"    <title>My HTML Boilerplate</title>",
+			"    <!-- Extra infos for search engines. -->",
+			"    <meta name=\"description\" content=\"A simple HTML5 Template with some interesting bonus meta elements.\">",
+			"    <meta name=\"author\" content=\"Francesca Oliverio\">",
+			"    <!-- Meta tags for sharing on socials. -->",
+			"    <meta property=\"og:title\" content=\"My HTML Boilerplate\">",
+			"    <meta property=\"og:type\" content=\"website\">",
+			"    <meta property=\"og:url\" content=\"https://www.programmazioneweb.com/my-html-boilerplate/\">",
+			"    <meta property=\"og:description\" content=\"A simple HTML5 Template with some interesting bonus meta elements.\">",
+			"    <meta property=\"og:image\" content=\"./assets/images/og-image.png\">",
+			"    <!-- CSS -->",
+			"    <link rel=\"stylesheet\" href=\"./style/destyle-oliverio.css\">",
+			"    <link rel=\"stylesheet\" href=\"./style/style.css?v=1.0\">",
+			"  </head>",
+			"  <body>",
+			"    <!-- Page content here. -->",
+			"    $0",
+			"    <!-- End of the body. -->",
+			"  </body>",
+			"</html>"
+		]
+	},
+	"My CSS Boilerplate": {
+		"scope": "css",
+		"prefix": "mycssboilerplate",
+		"description": "My CSS3 Boilerplate",
+		"body": [
+			"/* ===== style.css =====",
+			" *",
+			" * - Documentation -",
+			" *",
+			" */",
+			"",
+			"/* ----- Rules ----- */"
+		]
+	},
+	"My readme": {
+		"scope": "markdown",
+		"prefix": "myreadme",
+		"description": "readme for Shadi",
+		"body": [
+			"# Author",
+			"Oliverio Francesca",
+			"",
+			"# Assignment",
+			"## 1.Boilerplate",
+			"",
+			"# Solution"
+		]
+	}
+}
