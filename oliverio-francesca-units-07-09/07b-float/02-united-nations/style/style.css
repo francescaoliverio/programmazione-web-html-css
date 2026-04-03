@@ -1,0 +1,69 @@
+/* ===== style.css =====
+ *
+ * <ul>, each <li> composed of:
+ * - <img> for flag
+ * - <span> for Country Name
+ * - <span> for Country Population Number
+ * 
+ * Float sets name left aligned and population right aligned.
+ * Countries with large populations should be highlighted.
+ * Flags in rectangular frame, flags area has bg color.
+ *
+ * <div> #list-header fixed (contains 3x <span>, spaced)
+ */
+
+/* Import font Poppins: 300,400,900 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
+ 
+
+/* ----- Body ----- */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/* ----- List Header ----- */
+#list-header {
+  background-color:black;
+  color: white;
+  padding: 3em;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+#list-header>span {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+/* ----- Countries List ----- */
+ul {
+  margin-top: 8rem
+}
+li {
+  padding: 1em;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+li::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+img {
+  width: 33%;
+  max-width: 200px;
+  border: 1px solid black;
+}
+li>span {
+  width: 33%;
+  display: inline-block;
+}
+span.name {
+  float: left;
+  font-weight: 700;
+}
+span.population {
+  float: right;
+}
