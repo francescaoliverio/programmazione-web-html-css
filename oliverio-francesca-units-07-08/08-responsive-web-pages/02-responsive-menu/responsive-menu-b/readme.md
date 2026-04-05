@@ -2,7 +2,7 @@
 Oliverio Francesca
 
 # Assignment
-## 2.Responsive menu
+## 2.Responsive menu B
 Requirements
 - In 02-responsive-menu create 2 subfolders called responsive-menu-a and responsive-menu-b
 - Each folder should have a readme.md, style/style.css and index.html
