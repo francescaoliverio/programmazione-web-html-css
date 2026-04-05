@@ -1,7 +1,132 @@
 /* ===== style.css =====
  *
- * - Documentation -
+ * A different image is displayed at each breakpoint.
+ * The background color changes at each breakpoint.
  *
  */
 
-/* ----- Rules ----- */
+/* Import font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap");
+
+/* ----- Body ----- */
+body {
+  font-family: "Poppins", sans-serif;
+  text-wrap: balance;
+  text-align: center;
+  font-weight: 400;
+  transition: background-color 1s;
+}
+/* ----- Horizontal rule ----- */
+hr {
+  margin: 1em;
+}
+
+/* ----- Anchor ----- */
+a:hover {
+  text-decoration: underline;
+}
+
+/* ----- Figure ----- */
+figure {
+  width: 100%;
+  padding: 1em;
+}
+figure img {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+/* ==================== A different image is displayed at each breakpoint ====================
+ * All images are set to `display: none;` except for the selected one that needs to be seen. 
+ * =========================================================================================== */
+
+/* 1. no media query for `xxs` (less than 480px) -> default */
+  body {
+    background-color: hsl(0, 50%, 60%);
+  }
+  figure img {
+    display: none;
+  }
+  /* Butterfly */
+  figure img:first-of-type {
+    display: block;
+  }
+/* 2. extra-small devices (portrait phones, 480px and up) */
+@media (min-width: 480px) {
+  body {
+    background-color: hsl(30, 50%, 60%);
+  }
+  figure img:not(:nth-of-type(2)) {
+    display: none;
+  }
+  /* Koi */
+  figure img:nth-of-type(2) {
+    display: block;
+  }
+}
+/* 3. small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  body {
+    background-color: hsl(60, 50%, 60%);
+  }
+  figure img:not(:nth-of-type(3)) {
+    display: none;
+  }
+  /* Chicken */
+  figure img:nth-of-type(3) {
+    display: block;
+  }
+}
+/* 4. medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  body {
+    background-color: hsl(100, 50%, 60%);
+  }
+  figure img:not(:nth-of-type(4)) {
+    display: none;
+  }
+  /* Cat */
+  figure img:nth-of-type(4) {
+    display: block;
+  }
+}
+/* 5. large devices (small desktops, 992px and up) */
+@media (min-width: 992px) {
+  body {
+    background-color: hsl(200, 50%, 60%);
+  }
+  figure img:not(:nth-of-type(5)) {
+    display: none;
+  }
+  /* Dog */
+  figure img:nth-of-type(5) {
+    display: block;
+  }
+}
+/* 6. large devices (medium desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  body {
+    background-color: hsl(250, 50%, 60%);
+  }
+  figure img:not(:nth-of-type(6)) {
+    display: none;
+  }
+  /* Horse */
+  figure img:nth-of-type(6) {
+    display: block;
+  }
+}
+/* 7. extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    background-color: hsl(300, 50%, 60%);
+  }
+  figure img:not(:last-of-type) {
+    display: none;
+  }
+  /* Elephant */
+  figure img:last-of-type {
+    display: block;
+  }
+}
