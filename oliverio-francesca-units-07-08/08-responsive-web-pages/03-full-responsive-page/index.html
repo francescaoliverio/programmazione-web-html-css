@@ -1,28 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
     <!-- Compatibility settings. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Page title on browser window. -->
-    <title>My HTML Boilerplate</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page title and icon on browser window. -->
+    <title>The Vegan Society</title>
+    <link el="icon" href="https://www.vegansociety.com/sites/default/themes/the_vegan_society/assets/images/logo-vegan-society-sml.svg"/>
     <!-- Extra infos for search engines. -->
-    <meta name="description" content="A simple HTML5 Template with some interesting bonus meta elements.">
-    <meta name="author" content="Francesca Oliverio">
+    <meta name="description" content="Founded in 1944, The Vegan Society is a registered educational charity that provides information and guidance on various aspects of veganism."/>
+    <meta name="author" content="Francesca Oliverio" />
     <!-- Meta tags for sharing on socials. -->
-    <meta property="og:title" content="My HTML Boilerplate">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.programmazioneweb.com/my-html-boilerplate/">
-    <meta property="og:description" content="A simple HTML5 Template with some interesting bonus meta elements.">
-    <meta property="og:image" content="./assets/images/og-image.png">
+    <meta property="og:title" content="The Vegan Society" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.programmazioneweb.com/the-vegan-society/"/>
+    <meta property="og:description" content="Founded in 1944, The Vegan Society is a registered educational charity that provides information and guidance on various aspects of veganism."/>
+    <meta property="og:image" content="https://www.vegansociety.com/sites/default/themes/the_vegan_society/assets/images/logo-vegan-society-sml.svg"/>
     <!-- CSS -->
-    <link rel="stylesheet" href="./style/destyle-oliverio.css">
-    <link rel="stylesheet" href="./style/style.css?v=1.0">
+    <link rel="stylesheet" href="./style/destyle-oliverio.css" />
+    <link rel="stylesheet" href="./style/style.css?v=1.0" />
+    <link rel="stylesheet" href="./style/nav.css?v=1.0" />
   </head>
   <body>
     <!-- Page content here. -->
+    <!----- Fixed Header ----->
+    <header>
+      <!----- Navbar ----->
+      <nav>
+        <!-- Logo -->
+        <div class="logo">
+          <a href="https://www.vegansociety.com/">
+            <img class="small"
+              src="https://www.vegansociety.com/sites/default/themes/the_vegan_society/assets/images/logo-vegan-society-sml.svg"
+              alt="Small Vegan Society logo"
+            />
+            <img class="large"
+              src="https://www.vegansociety.com/sites/default/themes/the_vegan_society/assets/images/logo-vegan-society-lrg.svg"
+              alt="Large Vegan Society logo"
+            />
+          </a>
+        </div>
+        <!-- Burger -->
+        <button class="burger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </button>
+        <!-- Menu -->
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="https://www.vegansociety.com/news" target="_blank">News</a>
+            </li>
+            <li>
+              <a href="https://www.vegansociety.com/go-vegan" target="_blank">Go Vegan</a>
+            </li>
+            <li>
+              <a href="https://www.vegansociety.com/get-involved" target="_blank">Get Involved</a>
+            </li>
+            <li>
+              <a href="https://www.vegansociety.com/lifestyle" target="_blank">Lifestyle</a>
+            </li>
+            <li>
+              <a href="https://www.vegansociety.com/the-vegan-trademark" target="_blank">Vegan Trademark</a>
+            </li>
+            <li>
+              <a href="https://www.vegansociety.com/shop" target="_blank">Shop</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!----- Scrollable Content ----->
+    <div class="scrollable-content">
+      <!----- Sidebar ----->
+      <aside>
+        <h3>Why the Future is Vegan</h3>
+        <p>Explore our vegan utopia on desktop</p>
+        <button class="primary">Click here</button>
+      </aside>
+      <!----- Main ----->
+      <main>
+        <section id="hero">
+          <h1>Join The Vegan Society. To change society.</h1>
+          <p>Support our work, get helpful nutrition guidance and access over 100 member-exclusive discounts. Sign up from just £2 a month.</p>
+          <button class="primary">Join</button>
+        </section>
+        <div class="columns-wrapper">
+          <section class="column">
+            <h2>How vegan families are achieving meaningful change in education</h2>
+            <p>With clear and trusted support, vegan families can encourage sustainable change at school.</p>
+            <button>Read more</button>
+          </section>
+          <section class="column">
+            <h2>Our new briefing: how plant-based foods make the UK more secure</h2>
+            <p>Our Public Affairs and Policy Manager, Alistair Currie, explains how the war in Iran and the food on our plates are connected.</p>
+            <button>Read more</button>
+          </section>
+        </div>
+      </main>
+      <!----- Footer ----->
+      <footer>
+        <div class="buttons-container">
+          <button class="secondary">Contact Us</button>
+          <button class="secondary">Social</button>
+        </div>
+        <p class="small">Reg. Charity No: 279228 (England and Wales) and SC049495 (Scotland) | Company Reg. No: 01468880 and 12377572 (England and Wales) | VAT Registration No. 361 7274 92</p>
+        <p class="small">Designed and developed by: Francesca Oliverio</p>
+      </footer>
+    </div>
     <!-- End of the body. -->
+    <!-- JS -->
+    <script src="./scripts/main.js" defer></script>
   </body>
 </html>

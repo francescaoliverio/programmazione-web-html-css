@@ -1,7 +1,167 @@
 /* ===== style.css =====
  *
- * - Documentation -
+ * Fixed header, responsive navbar (nav.css)
+ * Fixed sidebar, only visible on large devices
+ * Scrollable content: #hero + 2 columns + footer
+ * 
+ * On small devices:
+ * - navbar with burger menu
+ * - sidebar set to `display: none`
+ * - main and footer static
+ * - columns stand alone
+ *
+ * On large devices:
+ * - expanded navbar
+ * - visible sidebar
+ * - main and footer float
+ * - columns side by side
  *
  */
 
-/* ----- Rules ----- */
+/* Import font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap");
+
+/* ----- Body ----- */
+body {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: teal;
+  font-family: "Poppins", sans-serif;
+  text-wrap: balance;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* ----- Typography ----- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-wrap: balance;
+}
+h1 { font-size: 2em;}
+h2 { font-size: 1.5em;}
+h3 { font-size: 1.15em;}
+
+/* ----- Header ----- */
+header * {
+  z-index: 10;
+}
+
+/* ----- .scrollable-content ----- */
+.scrollable-content {
+  margin-top: 6rem;
+}
+
+/* ----- Main ----- */
+@media (min-width: 992px) {
+  main {
+    width: 80%;
+    float: right;
+  }
+}
+
+/* ----- Sections ----- */
+section {
+  padding: 1rem;
+}
+
+/* ----- Hero ----- */
+#hero {
+  width: 80%;
+  max-width: 992px;
+  background-color: #fff9;
+  border: 2px solid white;
+  border-radius: 2rem;
+  color: black;
+  margin: 2rem auto;
+  text-wrap: balance;
+}
+
+/* ----- Columns ----- */
+.columns-wrapper {
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+}
+.column {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  display: inline-block;
+  width: 80%;
+}
+.column:hover button {
+  background-color: darkorange;
+  border: 1px solid darkorange;
+  color: white;
+}
+.column button {
+  border: 1px solid black;
+  color: black;
+}
+@media (min-width: 576px) {
+  .column {
+    width: 40%;
+  }
+}
+
+/* ----- Sidebar ----- */
+aside {
+  display: none;
+}
+@media (min-width: 992px) {
+  aside {
+    display: block;
+    background-image: url(https://www.vegansociety.com/sites/default/files/styles/featured_carousel_image/public/FIV-%20Website_Carousel%20%281%29.png?itok=gX9LblLJ);
+    background-size: cover;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    padding: 6rem 1rem;
+  }
+}
+
+/* ----- Footer ----- */
+@media (min-width: 992px) {
+  footer::before {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  footer {
+    float: right;
+    width: 80%;
+  }
+}
+p.small {
+  font-size: 80%;
+  margin: 1em;
+}
+
+/* ----- Buttons ----- */
+.scrollable-content button {
+  margin: 1em;
+  padding: 0.5em 1em;
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+.scrollable-content button.primary {
+  background-color: darkorange;
+  color: white
+}
+.scrollable-content button.primary:hover {
+  background-color: orange;
+}
+.scrollable-content button.secondary {
+  border: 1px solid white;
+  color: white
+}
+.scrollable-content button.secondary:hover {
+  background-color: white;
+  color: teal;
+}

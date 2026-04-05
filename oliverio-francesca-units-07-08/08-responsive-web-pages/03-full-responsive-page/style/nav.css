@@ -1,0 +1,171 @@
+/* ===== nav.css =====
+ *
+ * Responsive navbar, using only "min-width" media queries.
+ * Logo changes from small to large.
+ * Burger menu on small devices.
+ *
+ * Nav links displayed in the navbar on large devices.
+ * Nav links hidden in the menu on small devices.
+ * Menu opened/closed by the burger icon.
+ *
+ */
+
+/* ===== Navbar ===== */
+nav {
+  background-color: white;
+  color: black;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+nav * { /* nav children all set to inline-block */
+  display: inline-block;
+}
+
+/* ========== Logo ==========
+ * .logo > a > img
+ * ========================== */
+.logo {
+  float: left;
+  padding: 0.5em 1em;
+}
+.logo img {
+  height: 3em;
+}
+/** --- Media Queries --- */
+/* DEFAULT - Small devices (less than 576px) */
+.logo .small {
+  display: inline-block;
+}
+.logo .large {
+  display: none;
+}
+/* Medium devices (min 576px) */
+@media (min-width: 576px) {
+  .logo .small {
+    display: none;
+  }
+  .logo .large {
+    display: inline-block;
+  }
+}
+/* Large devices (min 768px) */
+@media (min-width: 768px) {
+  .logo .small {
+    display: inline-block;
+  }
+  .logo .large {
+    display: none;
+  }
+}
+/* Larger devices (min 1024px) */
+@media (min-width: 1024px) {
+  .logo .small {
+    display: none;
+  }
+  .logo .large {
+    display: inline-block;
+  }
+}
+
+/* ========== Burger ==========
+ * .burger > .bar
+ * =============================== */
+.burger {
+  background-color: darkorange;
+  position: relative; /* enables position: absolute for bars */
+  float: right;
+  height: 4em;
+  width: 4em;
+  transition: all 0.3s;
+}
+.burger:hover {
+  background-color: orange;
+}
+.burger .bar {
+  position: absolute;
+  left: 20%;
+  width: 60%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: white;
+  transition: all 0.3s;
+}
+/* BARS - closed menu (burger icon) */
+.burger .bar:first-child {
+  top: 30%;
+}
+.burger .bar:nth-child(2) {
+  top: calc(50% - 1px);
+}
+.burger .bar:last-child {
+  bottom: 30%;
+}
+/* BARS - cpen menu (cross icon) */
+.burger.toggle .bar:first-child {
+  top: 30%;
+  left: 25%;
+  width: calc(1.4 * 60%);
+  transform: rotate(45deg) translateY(1em);
+}
+.burger.toggle .bar:nth-child(2) {
+  display: none;
+}
+.burger.toggle .bar:last-child {
+  left: 25%;
+  bottom: 30%;
+  width: calc(1.4 * 60%);
+  transform: rotate(-45deg) translateY(-1em);
+}
+/* --- Media Queries --- */
+/* DEFAULT - Small devices (less than 768px) */
+.burger {
+  display: inline-block;
+  z-index: 10;
+}
+/* Large devices (min 768px) */
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+
+/** ========== Menu ==========
+ * .menu > ul > li > a
+ * =========================== */
+
+/* DEFAULT - Small devices (less than 768px) */
+.menu { /* hidden unless .nav-active */
+  display: none;
+}
+.menu.nav-active::before {
+  /* Clearfix for floating elements */
+  content: "";
+  clear: both;
+  display: block;
+}
+.menu.nav-active, .menu.nav-active * {
+  display: block;
+  width: 100%;
+}
+.menu.nav-active a {
+  padding: 1em;
+}
+.menu.nav-active a:hover {
+  background-color: teal;
+  color: white;
+}
+/* Large devices (min 768px) */
+@media (min-width: 768px) {
+  .menu, menu * {
+    display: inline-block;
+  }
+  li a {
+    padding: 1.2em 1em;
+  }
+  li a:hover {
+    color: teal;
+  }
+}
