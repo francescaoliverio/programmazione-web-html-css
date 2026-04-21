@@ -1,0 +1,93 @@
+/* ===== style.css ===== */
+/* ----- Rules ----- */
+/* Box Sizing */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Body */
+body {
+  background-color: #192035;
+  color: #ffffff;
+  min-width: 100vh;
+  margin: 0;
+}
+html body * {
+  font-family: "Montserrat", sans-serif;
+}
+body .bold {
+  font-weight: bold;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #e94100;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+/* Content */
+section, main {
+  padding: 50px;
+  margin: 0;
+}
+
+/* Light section */
+section.light, section.light div {
+  background-color: #ffffff;
+  color: #192035;
+}
+section.light h2 {
+  color: #e94100;
+}
+section.light p {
+  color: #5d5d5d;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .course-card {
+  width: 40%;
+  background-color: #ffffff;
+  border: 2px solid #192035;
+  border-radius: 8px;
+  padding: 50px;
+  margin: 5%;
+}
+main .course-card h3 {
+  color: #e94100;
+}
+main .course-card p {
+  color: #5d5d5d;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: 2px solid #e94100;
+  border-radius: 0;
+  padding: 10px 20px;
+  margin: 0;
+  background-color: #e94100;
+  color: #ffffff;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #ffffff;
+  color: #e94100;
+}
+
+/*# sourceMappingURL=style.css.map */
