@@ -15,10 +15,10 @@ html {
 body {
   background-color: #192035;
   color: #ffffff;
-  min-width: 100vh;
+  min-width: 100vw;
   margin: 0;
 }
-html body * {
+html body * { /* used a more specific selector to override user agent stylesheet */
   font-family: "Montserrat", sans-serif;
 }
 body .bold {
@@ -54,13 +54,14 @@ section.light p {
   color: #5d5d5d;
 }
 
+/* Main section with courses cards */
 main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 main .course-card {
-  width: 40%;
+  width: 100%;
   background-color: #ffffff;
   border: 2px solid #192035;
   border-radius: 8px;
@@ -74,6 +75,17 @@ main .course-card p {
   color: #5d5d5d;
 }
 
+@media (max-width: 768px) {
+  main { /* cards displayed in column when viewport width is less than 768px */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  main .course-card {
+    width: 90%;
+    min-width: min-content;
+  }
+}
 /* Buttons */
 button {
   cursor: pointer;
@@ -84,6 +96,7 @@ button {
   background-color: #e94100;
   color: #ffffff;
   font-weight: bold;
+  font-size: 105%;
 }
 button:hover {
   background-color: #ffffff;
