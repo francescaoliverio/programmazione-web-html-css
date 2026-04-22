@@ -1,0 +1,106 @@
+/* ===== style.css ===== */
+/* ----- Rules ----- */
+/* Box Sizing */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Body */
+body {
+  background-color: #192035;
+  color: #fff;
+  min-width: 100vw;
+  margin: 0;
+}
+html body * { /* used a more specific selector to override user agent stylesheet */
+  font-family: "Montserrat", sans-serif;
+}
+body .bold {
+  font-weight: bold;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #ff7842;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+/* Content */
+section, main {
+  padding: 50px;
+  margin: 0;
+}
+
+/* Light section */
+section.light, section.light div {
+  background-color: #111;
+  color: #fff;
+}
+section.light h2 {
+  color: #ff7842;
+}
+section.light p {
+  color: #ddd;
+}
+
+/* Main section with courses cards */
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .course-card {
+  width: 100%;
+  background-color: #111;
+  border: 2px solid #192035;
+  border-radius: 8px;
+  padding: 50px;
+  margin: 5%;
+}
+main .course-card h3 {
+  color: #ff7842;
+}
+main .course-card p {
+  color: #ddd;
+}
+
+@media (max-width: 768px) {
+  main { /* cards displayed in column when viewport width is less than 768px */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  main .course-card {
+    width: 90%;
+    min-width: min-content;
+  }
+}
+/* Buttons */
+button {
+  cursor: pointer;
+  border: 2px solid #ff7842;
+  border-radius: 0;
+  padding: 10px 20px;
+  margin: 0;
+  background-color: #ff7842;
+  color: #111;
+  font-weight: bold;
+  font-size: 105%;
+}
+button:hover {
+  background-color: #111;
+  color: #ff7842;
+}
+
+/*# sourceMappingURL=style.css.map */

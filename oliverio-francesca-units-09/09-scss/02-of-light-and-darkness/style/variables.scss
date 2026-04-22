@@ -1,0 +1,22 @@
+// paddings
+$base-padding: 50px;
+$button-padding: 10px 20px;
+
+// default colors (light theme)
+$its-secondary-text: #192035;
+$its-secondary-bg: #192035;
+$its-primary: #e94100;
+$its-light-bg: #fff;
+$its-light-text: #fff;
+$its-grey: #5d5d5d;
+
+// set theme: if true dark, else light
+$dark-theme: true;
+
+// colors variant (if dark theme)
+@if $dark-theme {
+  $its-secondary-text: #fff;
+  $its-primary: #ff7842;
+  $its-light-bg: #111;
+  $its-grey: #ddd;
+}

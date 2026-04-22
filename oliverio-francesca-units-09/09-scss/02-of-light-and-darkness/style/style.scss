@@ -1,0 +1,104 @@
+// style.scss
+
+/* ===== style.css ===== */
+
+// ----- Import variables and mixins -----
+ @use './variables' as v;
+ @use './mixins' as m;
+ 
+/* ----- Rules ----- */
+
+/* Box Sizing */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Body */
+body {
+  background-color: v.$its-secondary-bg;
+  color: v.$its-light-text;
+  min-width: 100vw;
+  margin: 0;
+  html & * { /* used a more specific selector to override user agent stylesheet */
+    font-family: "Montserrat", sans-serif;
+  }
+  .bold {
+    font-weight: bold;
+  }
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: v.$its-primary;
+  color: v.$its-light-text;
+  text-align: center;
+  @include m.box-spacing(v.$button-padding, 0);
+}
+
+/* Content */
+section, main {
+  @include m.box-spacing(v.$base-padding, 0);
+}
+
+/* Light section */
+section.light {
+  &, & div {
+    background-color: v.$its-light-bg;
+    color: v.$its-secondary-text;
+  }
+  h2 {
+    color: v.$its-primary;
+  }
+  p {
+    color: v.$its-grey;
+  }
+}
+/* Main section with courses cards */
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .course-card {
+    width: 100%;
+    @include m.card-style(v.$its-light-bg, v.$its-secondary-bg, 8px, v.$base-padding, 5%);
+    h3 {
+      color: v.$its-primary;
+    }
+    p {
+      color: v.$its-grey;
+    }
+  }
+}
+@media (max-width: 768px) {
+  main { /* cards displayed in column when viewport width is less than 768px */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    .course-card {
+      width: 90%;
+      min-width: min-content;
+    }
+  }
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  // box-style(border-color, border-radius, padding, margin)
+  @include m.box-style(v.$its-primary, 0, v.$button-padding, 0);
+  background-color: v.$its-primary;
+  color: v.$its-light-bg;
+  font-weight: bold;
+  font-size: 105%;
+  &:hover {
+    background-color: v.$its-light-bg;
+    color: v.$its-primary;
+  }
+}

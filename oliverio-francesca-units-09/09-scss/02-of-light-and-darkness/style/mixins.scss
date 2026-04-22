@@ -1,0 +1,15 @@
+@mixin box-spacing($padding, $margin) {
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin box-style($color, $radius, $p, $m) {
+  border: 2px solid $color;
+  border-radius: $radius;
+  @include box-spacing($p, $m);
+}
+
+@mixin card-style($bg-color, $border-color, $radius, $p, $m) {
+  background-color: $bg-color;
+  @include box-style($border-color, $radius, $p, $m);
+}

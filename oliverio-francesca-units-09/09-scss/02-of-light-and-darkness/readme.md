@@ -13,3 +13,8 @@ Oliverio Francesca
 - Submit your SCSS, CSS and HTML files as well as any files used for generating the SCSS
 
 References: [sass:color](https://sass-lang.com/documentation/modules/color/), [Theming with Sass tutorial](https://www.toptal.com/developers/sass/theming-scss-tutorial)
+
+# Solution
+To change the theme:  
+- go to **_.\style\variables.scss_**
+- set `$dark-theme: true/false;`
