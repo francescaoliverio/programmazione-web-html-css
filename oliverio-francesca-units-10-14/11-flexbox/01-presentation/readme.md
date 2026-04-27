@@ -12,3 +12,4 @@ Study all the links in references and use them to create a short presentation
 - Include your html and css files in the delivery
 
 # Solution
+Flexbox power: giving value to empy spaces.
