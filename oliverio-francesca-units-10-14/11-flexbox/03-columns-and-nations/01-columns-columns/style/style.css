@@ -1,0 +1,109 @@
+/* style.css
+ *
+ * Header and footer sticky/fixed at top and bottom.
+ * Sidebar takes full viewport height.
+ * Columns on the right side.
+ */
+
+
+/* Import font Poppins: 300,400,900 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;900&display=swap');
+
+/* Box-sizing */
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+/* ----- Typography ----- */
+html {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  margin: 1em 0;
+}
+
+/* ----- Flex containers (page layout) ----- */
+body {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: stretch;
+}
+main {
+  flex-grow: 1; /* to take all the possible height in the body */
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  flex: auto;
+  margin-bottom: 3em; /* to prevent footer overlapping */
+}
+
+/* ----- Sidebar and columns ----- */
+aside, .column {
+  padding: 20px;
+}
+aside {
+  background-color:cornflowerblue;
+  color: white;
+  flex: 1; /* 1 1 0 */
+}
+.column {
+  flex: 2; /* 2 1 0 -> grow 3x faster than aside */
+  width: 40%;
+  border-left: 1px solid black;
+}
+/* Media query for smaller screen: set <main> flex-direction: column; */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid black;
+  }
+}
+
+/* ----- Header and footer ----- */
+header, footer {
+  background-color: slateblue;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+/* Sticky header, so that it stays in the page flow, but stays fixed to the top */
+header {
+  position: sticky;
+  top: 0;
+}
+/* Fixed footer at the bottom of the page (hides content that goes under it) */
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+/* ----- Images ----- */
+img {
+  width: 80%;
+  max-width: 10em;
+}
+figcaption {
+  font-size: 80%;
+  font-style: italic;
+  font-weight: 300;
+  margin: 1em;
+}
+
+/* ----- Links ----- */
+a {
+  color: white;
+}
+a:hover {
+ color: hsl(248, 53%, 90%);
+}

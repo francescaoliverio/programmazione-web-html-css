@@ -1,0 +1,85 @@
+/* ===== style.css =====
+ *
+ * <ul>, each <li> composed of:
+ * - <figure> for flag
+ * - <span> for Country Name
+ * - <span> for Country Population Number
+ * 
+ * Flex sets name left aligned and population right aligned.
+ * Countries with large populations should be highlighted.
+ * Flags in rectangular frame, flags area has bg color.
+ *
+ * <div> #list-header fixed (contains 3x <span>, spaced)
+ */
+
+/* Import font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
+ 
+
+/* ----- Body ----- */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/* ----- List Header ----- */
+#list-header {
+  background-color:black;
+  color: white;
+  padding: 2.4em 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+}
+#list-header>span {
+  text-align: center;
+  flex: 1;
+}
+
+/* ----- Countries List ----- */
+ul {
+  margin-top: 6rem;
+}
+li {
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+li>* {
+  flex: 1;
+}
+li>span {
+  padding-top: 2.5em;
+}
+span.name {
+  order: -1;
+  font-weight: 700;
+}
+
+/* ----- Flags ----- */
+figure {
+  padding: 1em;
+  min-width: fit-content;
+  background-color: #fff7f0;
+}
+img {
+  height: 4em;
+  border: 1px solid black;
+  transition: all 300ms ease;
+}
+img:hover {
+  height: 4.5em;
+}
+
+/* ----- Highlighted ----- */
+/* Countries with large population */
+.large-population span {
+  text-decoration: underline dotted red 3px;
+}
+em { /* for legenda */
+  padding: 1em;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
