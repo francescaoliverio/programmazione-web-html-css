@@ -58,7 +58,7 @@ aside {
   border-left: 1px solid black;
 }
 /* Media query for smaller screen: set <main> flex-direction: column; */
-@media (max-width: 768px) {
+@media (max-width: 824px) {
   main {
     flex-direction: column;
   }
@@ -66,6 +66,12 @@ aside {
     width: 100%;
     border-left: none;
     border-top: 1px solid black;
+  }
+}
+/* Media query for very small screen: when footer breaks into 2 lines */
+@media (max-width: 300px) {
+  main {
+    margin-bottom: 5em; /* to prevent footer overlapping */
   }
 }
 
