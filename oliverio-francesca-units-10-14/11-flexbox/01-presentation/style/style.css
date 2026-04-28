@@ -5,3 +5,69 @@
  */
 
 /* ----- Rules ----- */
+
+/* Import font Poppins: 300,400,900 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap');
+
+/* Box-sizing */
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+/* ----- Typography ----- */
+html {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  margin: 1em 0;
+}
+
+/* ----- Presentation ----- */
+.flex-container {
+  border: 2px solid #a69de6;
+  border-radius: 10px;
+  margin: 2em;
+  padding: 1em;
+  height: 50em;
+}
+.flex-item {
+  min-width: 100px;
+  max-width: 300px;
+  color: #a69de6;
+  background-color: #f4f1e9;
+  /* for content alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+/* ----- Flex ----- */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: stretch;
+  gap: 1em;
+}
+.flex-item {
+  flex: 1;
+}
+.flex-item:nth-child(3n - 1) {
+  flex: 4 1 100px;
+}
+.flex-item:nth-child(3n - 2) {
+  flex: 1 2 100px;
+}
+.flex-item:nth-child(3) {
+  order: -1;
+}
+.flex-item:nth-child(6) {
+  order: 1;
+}
