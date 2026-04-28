@@ -1,15 +1,15 @@
 /* ===== style.css =====
  *
- * - Documentation -
- *
+ * .flex-container > .flex-item (9x)
+ * The .flex-container needs to be a flexbox
+ * All of the main features of flexbox should be used
+ * 
  */
-
-/* ----- Rules ----- */
 
 /* Import font Poppins: 300,400,900 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap');
 
-/* Box-sizing */
+/* ---------- Box-sizing ---------- */
 *, *::before, *::after {
   box-sizing: inherit;
   margin: 0;
@@ -18,7 +18,7 @@ html {
   box-sizing: border-box;
 }
 
-/* ----- Typography ----- */
+/* ---------- Typography ---------- */
 html {
   font-family: "Poppins", sans-serif;
 }
@@ -26,9 +26,10 @@ p {
   margin: 1em 0;
 }
 
-/* ----- Presentation ----- */
+/* -------------------- Presentation -------------------- */
+/*** here only for-aesthetic-purpose properties are set ***/
 .flex-container {
-  border: 2px solid #a69de6;
+  border: 2px solid mediumslateblue;
   border-radius: 10px;
   margin: 2em;
   padding: 1em;
@@ -37,9 +38,9 @@ p {
 .flex-item {
   min-width: 100px;
   max-width: 300px;
-  color: #a69de6;
-  background-color: #f4f1e9;
-  /* for content alignment */
+  color: mediumslateblue;
+  background-color: linen;
+  /* for inner content */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,27 +48,28 @@ p {
   font-weight: 600;
 }
 
-/* ----- Flex ----- */
+/* -------------------- Flexbox -------------------- */
+/*** here the proper flexbox properties/playground ***/
 .flex-container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: stretch;
-  align-items: stretch;
-  gap: 1em;
+  flex-flow: row wrap; /* direction + wrap */
+  justify-content: center; /* alignment on main axis */
+  align-content: stretch; /* alignment on cross axis when wrapped */
+  align-items: stretch; /* alignment on cross axis */
+  gap: 1em; /* gap (horizontal and vertical) between items */
 }
-.flex-item {
-  flex: 1;
+.flex-item { /* every child grows equally (no shrinking as flex-basis is 0) */
+  flex: 1; /* flex -grow:1, -shrink:1, -basis:0 */
 }
-.flex-item:nth-child(3n - 1) {
-  flex: 4 1 100px;
+.flex-item:nth-child(3n - 1) { /* 2nd, 5th, 8th child grow faster (from 100px up) */
+  flex: 4 1 100px;  /* flex -grow:4, -shrink:1, -basis:100px */
 }
-.flex-item:nth-child(3n - 2) {
-  flex: 1 2 100px;
+.flex-item:nth-child(3n - 2) { /* 1st, 4th, 7th child shrink faster (from 100px down) */
+  flex: 1 2 100px; /* flex -grow:1, -shrink:2, -basis:100px */
 }
-.flex-item:nth-child(3) {
+.flex-item:nth-child(3) { /* 3rd child goes to first position */
   order: -1;
 }
-.flex-item:nth-child(6) {
+.flex-item:nth-child(6) { /* 6th child goes to last position */
   order: 1;
 }
