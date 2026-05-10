@@ -33,4 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     levelOutput.textContent = cefrLevels[numericValue];
   });
   
+  // Change background color on color input
+  const colorInput = document.getElementById('badgeColor');
+  colorInput.addEventListener('input', (event) => {
+    document.body.style.backgroundColor = event.target.value;
+  });
 });

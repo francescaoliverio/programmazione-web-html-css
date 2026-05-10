@@ -172,7 +172,6 @@
               <div class="col-md-6 position-relative">
                 <label for="interviewTime" class="form-label">Preferred Interview Time</label>
                 <input type="time" class="form-control" id="interviewTime" name="interviewTime">
-                <div class="invalid-tooltip">Please select a time.</div>
               </div>
               <!-- Bio & Motivation -->
               <div class="col-12 position-relative">
@@ -187,7 +186,7 @@
               <!-- Bonus: change background color -->
               <div class="col-12 position-relative">
                 <label for="badgeColor" class="form-label">Change Background Color <span class="small">(just for fun)</span></label>
-                <input type="color" class="form-control form-control-color w-25" id="badgeColor" name="badgeColor" list="colorList" title="Choose your color" oninput="document.body.style.backgroundColor = this.value">
+                <input type="color" class="form-control form-control-color w-25" id="badgeColor" name="badgeColor" list="colorList" title="Choose your color">
                 <datalist id="colorList">
                   <option value="#192035">Default</option>
                   <option value="#ff0000">Red</option>
@@ -220,7 +219,7 @@
     </main>
     <!-- End of the body. -->
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.min.js" integrity="sha256-ew8UiV1pJH/YjpOEBInP1HxVvT/SfrCmwSoUzF9JIgc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha256-ew8UiV1pJH/YjpOEBInP1HxVvT/SfrCmwSoUzF9JIgc=" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <script defer src="./scripts/script.js"></script>
   </body>
