@@ -1,7 +1,92 @@
 /* ===== style.css =====
  *
- * - Documentation -
+ * font: Montserrat
+ * brand colors (ITS ICT Piemonte)
+ * form container styled with box-shadow
+ * custom style for headings, labels, buttons
+ * fix for tooltips overlapping (added margin-bottom)
  *
  */
 
-/* ----- Rules ----- */
+/* Import Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* ----- Override Bootstrap Custom Properties ----- */
+:root {
+  /* Font Family */
+  --bs-font-sans-serif: 'Montserrat', sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+
+  /* Brand Colors */
+  --bs-primary: #e94100;
+  --bs-primary-rgb: 233, 65, 0;
+  --bs-secondary: #192035;
+  --bs-secondary-rgb: 25, 32, 53;
+
+  /* Body Text Color */
+  --bs-body-color: #192035;
+}
+
+/* ----- Custom Style ----- */
+/* Body */
+body {
+  background-color: var(--bs-secondary);
+}
+/* Form Container */
+.form-container {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+/* Headings */
+.form-container h1, 
+.form-container h2, 
+.form-container h4 {
+  color: var(--bs-primary);
+  font-weight: 700;
+}
+/* Form Labels */
+.form-label {
+  font-weight: 500;
+  color: var(--bs-secondary);
+}
+
+/* ----- Custom Button Styles ----- */
+.btn {
+  border-radius: 0; /* Square edges */
+  font-weight: 600;
+  padding: 10px 20px;
+}
+/* Primary Button */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border: 2px solid var(--bs-primary);
+  color: #ffffff;
+}
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active {
+  background-color: #ffffff !important;
+  color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+/* Secondary Button */
+.btn-secondary {
+  background-color: var(--bs-secondary);
+  border: 2px solid var(--bs-secondary);
+  color: #ffffff;
+}
+.btn-secondary:hover, 
+.btn-secondary:focus, 
+.btn-secondary:active {
+  background-color: #ffffff !important;
+  color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+}
+
+/* ----- Tooltips Overlap Fix ----- */
+/* Ensure tooltips show properly without overlapping */
+.needs-validation .position-relative {
+  margin-bottom: 3rem;
+}
