@@ -1,0 +1,88 @@
+/* ===== style.css =====
+ *
+ * - Documentation -
+ *
+ */
+
+/* ----- Rules ----- */
+
+/* Import font Poppins: 300,400,900 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;900&display=swap');
+
+/* Box-sizing */
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+/* ----- Typography ----- */
+html {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  margin: 1em 0;
+}
+
+/* ----- Flex containers (page layout) ----- */
+body {
+  padding: 3rem;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+main {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+button {
+  padding: 10px 20px;
+  font: inherit;
+  color: white;
+  width: fit-content;
+  background-color: slateblue;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: darkslateblue;
+}
+a, a:visited {
+  color: slateblue;
+}
+a:hover, a:focus {
+  color: darkslateblue;
+}
+/* ----- Video Card Component ----- */
+div.video-card {
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid slateblue;
+  .img-wrapper {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+  }
+  img {
+    width: 200px;
+    display: block;
+  }
+  .play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0003; display: none; align-items: center;
+    justify-content: center; color: white; font-size: 14px;
+  }
+}
