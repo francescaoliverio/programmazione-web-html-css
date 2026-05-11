@@ -38,13 +38,13 @@
             <div class="row">
               <!-- First Name -->
               <div class="col-md-6 position-relative">
-                <label for="firstName" class="form-label">First Name</label>
+                <label for="firstName" class="form-label required">First Name</label>
                 <input type="text" class="form-control" id="firstName" name="firstName" required minlength="3" maxlength="50">
                 <div class="invalid-tooltip">Must be 3-50 characters.</div>
               </div>
               <!-- Last Name -->
               <div class="col-md-6 position-relative">
-                <label for="lastName" class="form-label">Last Name</label>
+                <label for="lastName" class="form-label required">Last Name</label>
                 <input type="text" class="form-control" id="lastName" name="lastName" required minlength="3" maxlength="50">
                 <div class="invalid-tooltip">Must be 3-50 characters.</div>
               </div>
@@ -66,43 +66,43 @@
               </div>
               <!-- Date of Birth -->
               <div class="col-md-6 position-relative">
-                <label for="dob" class="form-label">Date of Birth</label>
+                <label for="dob" class="form-label required">Date of Birth</label>
                 <input type="date" class="form-control" id="dob" name="dob" required>
                 <div class="invalid-tooltip">Please provide your birth date.</div>
               </div>
               <!-- Phone number -->
               <div class="col-md-6 position-relative">
-                <label for="phone" class="form-label">Phone Number</label>
+                <label for="phone" class="form-label required">Phone Number</label>
                 <input type="tel" class="form-control" id="phone" name="phone" required pattern="^\+?[0-9\s]{10,15}$">
                 <div class="invalid-tooltip">Enter a valid phone number (e.g., +39 3331234567).</div>
               </div>
               <!-- Personal Email -->
               <div class="col-md-6 position-relative">
-                <label for="personalEmail" class="form-label">Personal Email</label>
+                <label for="personalEmail" class="form-label required">Personal Email</label>
                 <input type="email" class="form-control" id="personalEmail" name="personalEmail" required pattern="^.+@.+\..+$">
                 <div class="invalid-tooltip">Please enter a standard email (e.g., name@domain.com).</div>
               </div>
               <!-- Institutional Email -->
               <div class="col-md-6 position-relative">
-                <label for="email" class="form-label">Institutional Email</label>
+                <label for="email" class="form-label required">Institutional Email</label>
                 <input type="email" class="form-control" id="email" name="email" required pattern="^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)+@edu-its\.it$">
                 <div class="invalid-tooltip">Format must be exactly: name.surname@edu-its.it</div>
               </div>
               <!-- Password -->
               <div class="col-md-6 position-relative">
-                <label for="password" class="form-label">Account Password</label>
+                <label for="password" class="form-label required">Account Password</label>
                 <input type="password" class="form-control" id="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,16}$">
                 <div class="invalid-tooltip">Length: 8-16. Include at least one: lower (a), upper (A), number (1), symbol (?).</div>
               </div>
               <!-- LinkedIn -->
               <div class="col-md-6 position-relative">
-                <label for="linkedin" class="form-label">LinkedIn Profile URL</label>
+                <label for="linkedin" class="form-label required">LinkedIn Profile URL</label>
                 <input type="url" class="form-control" id="linkedin" name="linkedin" required>
                 <div class="invalid-tooltip">Must be a valid URL (include https://).</div>
               </div>
               <!-- CV -->
               <div class="col-md-6 position-relative">
-                <label for="cvUpload" class="form-label">Upload CV (.pdf)</label>
+                <label for="cvUpload" class="form-label required">Upload CV (.pdf)</label>
                 <input type="file" class="form-control" id="cvUpload" name="cvUpload" accept=".pdf" required>
                 <div class="invalid-tooltip">Please upload your CV in PDF format.</div>
               </div>
@@ -112,7 +112,7 @@
             <div class="row">
               <!-- ITS Course -->
               <div class="col-md-8 position-relative">
-                <label for="course" class="form-label">Current Course</label>
+                <label for="course" class="form-label required">Current Course</label>
                 <select class="form-select" id="course" name="course" required>
                   <option selected disabled value="">Choose your course...</option>
                   <option value="AR/VR and 3D Artist">AR/VR and 3D Artist</option>
@@ -131,7 +131,7 @@
               </div>
               <!-- Marks Average -->
               <div class="col-md-4 position-relative">
-                <label for="averageMarks" class="form-label">Marks Average (18-30)</label>
+                <label for="averageMarks" class="form-label required">Marks Average (18-30)</label>
                 <input type="number" class="form-control" id="averageMarks" name="averageMarks" required min="18" max="30">
                 <div class="invalid-tooltip">Value must be between 18 and 30.</div>
               </div>
@@ -146,11 +146,11 @@
               <div class="col-md-6 position-relative">
                 <label class="form-label d-block">Previous Abroad Experience?</label>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="abroadExp" id="expYes" value="yes" required>
+                  <input class="form-check-input" type="radio" name="abroadExp" id="expYes" value="yes">
                   <label class="form-check-label" for="expYes">Yes</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="abroadExp" id="expNo" value="no" required>
+                  <input class="form-check-input" type="radio" name="abroadExp" id="expNo" value="no">
                   <label class="form-check-label" for="expNo">No</label>
                 </div>
               </div>
@@ -175,7 +175,7 @@
               </div>
               <!-- Bio & Motivation -->
               <div class="col-12 position-relative">
-                <label for="motivation" class="form-label">Bio & Motivation</label>
+                <label for="motivation" class="form-label required">Bio & Motivation</label>
                 <textarea class="form-control" id="motivation" name="motivation" rows="4" required minlength="50" maxlength="500" placeholder="Why do you want to participate? (50-500 chars)"></textarea>
                 <div class="invalid-tooltip">Please write between 50 and 500 characters.</div>
               </div>
@@ -189,19 +189,22 @@
                 <input type="color" class="form-control form-control-color w-25" id="badgeColor" name="badgeColor" list="colorList" title="Choose your color">
                 <datalist id="colorList">
                   <option value="#192035">Default</option>
-                  <option value="#ff0000">Red</option>
-                  <option value="#fd7e14">Orange</option>
+                  <option value="#dc3545">Red</option>
+                  <option value="#ee7b26">Orange</option>
                   <option value="#ffc107">Yellow</option>
-                  <option value="#198754">Green</option>
-                  <option value="#0d6efd">Blue</option>
-                  <option value="#6f42c1">Violet</option>
+                  <option value="#28a745">Green</option>
+                  <option value="#15a9bc">Teal</option>
+                  <option value="#007bff">Blue</option>
+                  <option value="#6938dc">Violet</option>
+                  <option value="#dc38c0">Pink</option>
+                  <option value="#ffffff">White</option>
                 </datalist>
               </div>
               <!-- GDPR Check -->
               <div class="col-12 position-relative">
                 <div class="form-check form-switch">
                   <input class="form-check-input" type="checkbox" role="switch" value="agreed" id="gdprCheck" name="gdprCheck" required>
-                  <label class="form-check-label" for="gdprCheck">
+                  <label class="form-check-label required" for="gdprCheck">
                     I agree to the processing of personal data for the Erasmus project selections, in accordance with the GDPR.
                   </label>
                   <div class="invalid-tooltip">You must agree before submitting.</div>

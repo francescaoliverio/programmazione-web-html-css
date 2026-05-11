@@ -51,6 +51,10 @@ body {
   font-weight: 500;
   color: var(--bs-secondary);
 }
+.required::after {
+ content: " *";
+ color: #e94100;
+}
 
 /* ----- Custom Button Styles ----- */
 .btn {
