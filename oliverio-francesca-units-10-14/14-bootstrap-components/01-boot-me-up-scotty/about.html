@@ -58,7 +58,8 @@
         </div>
       </div>
     </header>
-    <div class="container my-4">
+    <!-- Main -->
+    <main class="container my-4">
       <!-- Breadcrumb -->
       <nav aria-label="breadcrumb" class="mb-4">
         <ol class="breadcrumb">
@@ -66,12 +67,12 @@
           <li class="breadcrumb-item active">About</li>
         </ol>
       </nav>
-      <!-- Main + Aside -->
+      <!-- Main Content + Sidebar -->
       <div class="row g-4">
-        <!-- Main -->
-        <main class="col-lg-8">
+        <div class="col-lg-8 py-0">
           <!-- Card with navigation header -->
           <section class="card mb-4 py-0">
+            <h2 class="visually-hidden">Browse Articles</h2>
             <div class="card-header">
               <ul class="nav nav-tabs card-header-tabs" id="aboutTabs" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -87,17 +88,17 @@
             </div>
             <div class="card-body tab-content p-4">
               <div class="tab-pane fade show active" id="mission" role="tabpanel">
-                <h5 class="card-title">Our Mission</h5>
+                <h2 class="card-title">Our Mission</h2>
                 <p>The New York Historical Times is a digital archive and educational project dedicated to preserving and presenting the journalism of the New York Times from the 1950s — one of the most consequential decades in American history.</p>
                 <p>We believe that primary sources matter. Reading the news as it was reported — in real time, with the uncertainty and limitations of the moment — gives a depth of understanding that no retrospective account can fully replicate.</p>
               </div>
               <div class="tab-pane fade" id="history" role="tabpanel">
-                <h5 class="card-title">A Brief History</h5>
+                <h2 class="card-title">A Brief History</h2>
                 <p>The New York Times was founded in 1851 by journalist and politician Henry Jarvis Raymond and former banker George Jones. From its earliest days, it positioned itself as a paper of record — thorough, sober, and committed to factual reporting.</p>
                 <p>By the 1950s, the Times had established itself as arguably the most influential newspaper in the English-speaking world. Its coverage of the Civil Rights Movement helped bring Southern racial violence to the attention of a national and international audience.</p>
               </div>
               <div class="tab-pane fade" id="editorial" role="tabpanel">
-                <h5 class="card-title">Editorial Standards</h5>
+                <h2 class="card-title">Editorial Standards</h2>
                 <p>The articles presented in this archive are reproduced for educational purposes. Where original text is quoted, it is presented faithfully, including language and framing that reflects the conventions and limitations of 1950s journalism.</p>
                 <p>Context, background information and explanatory notes have been added by the editorial team of this digital project to assist modern readers in understanding the historical significance of each piece.</p>
               </div>
@@ -105,7 +106,7 @@
           </section>
           <!-- Collapse: FAQ -->
           <section>
-            <h5 class="section-title small">Frequently Asked Questions</h5>
+            <h3 class="section-title small">Frequently Asked Questions</h3>
             <div class="d-flex flex-column gap-2 mb-4">
               <div>
                 <button class="btn btn-outline-primary w-100 text-start collapse-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Is the content historically accurate?</button>
@@ -129,16 +130,16 @@
           </section>
           <!-- Contact Us (open modal) -->
           <section>
-            <h5 class="section-title small">Contact the Archive</h5>
+            <h3 class="section-title small">Contact the Archive</h3>
             <p>Have a question about the project, a correction to suggest, or a document to contribute? Reach out to the editorial team.</p>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
           </section>
-        </main>
+        </div>
         <!-- Sidebar -->
         <aside class="col-lg-4">
           <!-- Bootstrap Components -->
           <section class="highlight-bg ink-border p-3 mb-4">
-            <h5 class="section-title small">Bootstrap Components Used</h5>
+            <h3 class="section-title small">Bootstrap Components Used</h3>
             <ul class="list-unstyled">
               <li class="mb-1"><span class="badge bg-primary me-2">1</span> Navbar</li>
               <li class="mb-1"><span class="badge bg-primary me-2">2</span> Alert</li>
@@ -156,7 +157,7 @@
           </section>
           <!-- Project Info -->
           <section class="highlight-bg ink-border p-3">
-            <h5 class="section-title small">Project Info</h5>
+            <h3 class="section-title small">Project Info</h3>
             <ul class="list-unstyled font-title">
               <li><strong>Author:</strong> Francesca Oliverio</li>
               <li><strong>Course:</strong> Web & Mobile App Developer</li>
@@ -167,10 +168,9 @@
           </section>
         </aside>
       </div>
-    </div>
-
+    </main>
     <!-- Modal -->
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true" role="alertdialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">

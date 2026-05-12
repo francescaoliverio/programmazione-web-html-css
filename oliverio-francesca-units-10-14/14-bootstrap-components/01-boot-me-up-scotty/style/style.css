@@ -1,7 +1,7 @@
 /* ===== style.css ===== */
 
 /* ----- Google Fonts ----- */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Special+Elite&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Special+Elite&display=swap");
 
 /* ----- Bootstrap Custom Properties Override ----- */
 :root {
@@ -17,8 +17,8 @@
   --bs-border-color: #111;
 
   /* Typography */
-  --bs-body-font-family: 'Special Elite', 'Courier New', Courier, monospace;
-  --bs-font-sans-serif: 'Oswald', Impact, 'Arial Narrow Bold', sans-serif;
+  --bs-body-font-family: "Special Elite", "Courier New", Courier, monospace;
+  --bs-font-sans-serif: "Oswald", Impact, "Arial Narrow Bold", sans-serif;
   --bs-heading-font: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-line-height: 1.7;
@@ -38,12 +38,26 @@ body {
     flex: 1; /* takes up all the remaining space in the body (footer at flex end) */
   }
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--bs-font-sans-serif);
   font-weight: 500;
   text-wrap: balance;
 }
-h1, h3, h5 { text-transform: uppercase; }
+h1,
+h3,
+h5 {
+  text-transform: uppercase;
+}
+a,
+a:hover,
+a:focus {
+  color: var(--bs-secondary);
+}
 
 /* ----- Navbar ----- */
 .navbar {
@@ -84,7 +98,7 @@ h1, h3, h5 { text-transform: uppercase; }
     text-transform: uppercase;
     border-top: 1px solid var(--bs-border-color);
     border-bottom: 1px solid var(--bs-border-color);
-    padding: .5em 0;
+    padding: 0.5em 0;
   }
 }
 
@@ -150,9 +164,18 @@ section {
   font-size: 0.75rem;
   font-weight: 500;
 }
-.badge.bg-primary { background-color: var(--bs-primary); color: var(--bs-light); }
-.badge.bg-secondary { background-color: var(--bs-secondary); color: var(--bs-light); }
-.badge.bg-warning { background-color: var(--accent-bg); color: var(--bs-body-color); }
+.badge.bg-primary {
+  background-color: var(--bs-primary);
+  color: var(--bs-light);
+}
+.badge.bg-secondary {
+  background-color: var(--bs-secondary);
+  color: var(--bs-light);
+}
+.badge.bg-warning {
+  background-color: var(--accent-bg);
+  color: var(--bs-body-color);
+}
 
 /* ----- Alert ----- */
 .alert {
@@ -170,8 +193,12 @@ section {
   font-family: var(--bs-font-sans-serif);
   text-transform: uppercase;
   font-size: 0.75rem;
-  .breadcrumb-item a { color: var(--bs-body-color); }
-  .breadcrumb-item.active { color: var(--bs-secondary); }
+  .breadcrumb-item a {
+    color: var(--bs-body-color);
+  }
+  .breadcrumb-item.active {
+    color: var(--bs-secondary);
+  }
 }
 
 /* ----- Accordion ----- */
@@ -227,7 +254,8 @@ section {
     background-color: var(--bs-body-bg);
     border-color: var(--bs-border-color);
   }
-  .page-link:hover, .page-link:focus{
+  .page-link:hover,
+  .page-link:focus {
     background-color: var(--bs-light);
     color: var(--bs-body-color);
     box-shadow: none;
@@ -237,7 +265,7 @@ section {
     color: var(--bs-body-bg);
   }
   .page-item.disabled .page-link {
-    background-color:#6b645964;
+    background-color: #6b645964;
   }
 }
 
@@ -261,48 +289,43 @@ section {
   border-radius: 0;
   font-family: var(--bs-font-sans-serif);
   text-transform: uppercase;
-  font-size: 0.8rem;
   font-weight: 500;
 }
-
 .btn-primary {
-  background-color: #111;
-  border-color: #111;
-  color: #fcfaf9;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-body-bg);
 }
-
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: #fcfaf9;
-  border-color: #111;
-  color: #111;
+  background-color: var(--bs-body-bg);
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
 }
-
 .btn-outline-primary {
-  border-color: #111;
-  color: #111;
+  background-color: var(--bs-body-bg);
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
 }
-
 .btn-outline-primary:hover {
-  background-color: #111;
-  color: #fcfaf9;
+  background-color: var(--bs-body-bg);
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
 }
-
 .btn-outline-secondary {
-  border-color: #6b6459;
-  color: #6b6459;
+  border-color: var(--bs-secondary);
+  color: var(--bs-secondary);
 }
-
 .btn-outline-secondary:hover {
-  background-color: #6b6459;
-  color: #fcfaf9;
+  background-color: var(--bs-secondary);
+  color: var(--bs-body-bg);
 }
 
 /* ----- Tooltip ----- */
 .tooltip-inner {
   border-radius: 0;
-  background-color: #111;
+  background-color: var(--bs-primary);
   font-family: var(--bs-font-sans-serif);
   font-size: 0.75rem;
 }
@@ -315,17 +338,22 @@ section {
 
 /* ----- Footer ----- */
 .site-footer {
-  background-color: #111;
-  color: #fcfaf9;
+  color: var(--bs-body-bg);
+  background-color: var(--bs-primary);
   font-family: var(--bs-font-sans-serif);
-  font-size: 0.75rem;
   text-transform: uppercase;
-  padding: 1.5rem 0;
-  border-top: 3px double #fcfaf9;
 }
 
 /* ----- Utility ----- */
-.highlight-bg { background-color: var(--accent-bg); }
-.white-bg { background-color: white; }
-.ink-border { border: 1px solid var(--bs-border-color); }
-.font-title { font-family: var(--bs-font-sans-serif); }
+.highlight-bg {
+  background-color: var(--accent-bg);
+}
+.white-bg {
+  background-color: white;
+}
+.ink-border {
+  border: 1px solid var(--bs-border-color);
+}
+.font-title {
+  font-family: var(--bs-font-sans-serif);
+}
