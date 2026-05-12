@@ -1,7 +1,331 @@
-/* ===== style.css =====
- *
- * - Documentation -
- *
- */
+/* ===== style.css ===== */
 
-/* ----- Rules ----- */
+/* ----- Google Fonts ----- */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Special+Elite&display=swap');
+
+/* ----- Bootstrap Custom Properties Override ----- */
+:root {
+  /* Colors */
+  --bs-body-bg: #fcfaf9;
+  --bs-body-color: #111;
+  --bs-primary: #111;
+  --bs-primary-rgb: 17, 17, 17;
+  --bs-secondary: #6b6459;
+  --bs-secondary-rgb: 107, 100, 89;
+  --bs-light: #f0ebe4;
+  --bs-light-rgb: 240, 235, 228;
+  --bs-border-color: #111;
+
+  /* Typography */
+  --bs-body-font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  --bs-font-sans-serif: 'Oswald', Impact, 'Arial Narrow Bold', sans-serif;
+  --bs-heading-font: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.7;
+
+  /* My custom properties */
+  --accent-bg: #f5eee0;
+}
+
+/* ----- Global ----- */
+body {
+  background-color: var(--bs-body-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  main {
+    flex: 1; /* takes up all the remaining space in the body (footer at flex end) */
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--bs-font-sans-serif);
+  font-weight: 500;
+  text-wrap: balance;
+}
+h1, h3, h5 { text-transform: uppercase; }
+
+/* ----- Navbar ----- */
+.navbar {
+  border-bottom: 1px solid var(--bs-border-color);
+  background-color: var(--bs-light);
+  font-family: var(--bs-font-sans-serif);
+  text-transform: uppercase;
+  .navbar-brand svg {
+    height: 2em;
+  }
+  .nav-link {
+    font-family: var(--bs-font-sans-serif);
+  }
+  /* Burger menu: no border/shadow */
+  .navbar-toggler {
+    border: none;
+    box-shadow: none;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+
+/* ----- Masthead (newspaper header) ----- */
+.masthead {
+  border-bottom: 3px double var(--bs-border-color);
+  border-top: 3px double var(--bs-border-color);
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: var(--bs-body-bg);
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .masthead-meta {
+    font-family: var(--bs-font-sans-serif);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    border-top: 1px solid var(--bs-border-color);
+    border-bottom: 1px solid var(--bs-border-color);
+    padding: .5em 0;
+  }
+}
+
+/* ----- Section dividers ----- */
+section {
+  padding: 1em 0;
+}
+.section-title {
+  font-family: var(--bs-font-sans-serif);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--bs-border-color);
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ----- Cards ----- */
+.card {
+  border-radius: 0;
+  border-color: var(--bs-border-color);
+  .card-header {
+    border-radius: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+    background-color: var(--bs-light);
+    font-family: var(--bs-font-sans-serif);
+    text-transform: uppercase;
+  }
+  .card-title {
+    font-family: var(--bs-font-sans-serif);
+  }
+  .card-img-top {
+    border-radius: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+}
+
+/* ----- Carousel ----- */
+.carousel {
+  border: 1px solid var(--bs-border-color);
+  .carousel-caption {
+    background-color: #f0ebe4f0;
+    color: var(--bs-body-color);
+    text-align: left;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--bs-border-color);
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    filter: invert(1);
+    width: 8%;
+  }
+  .carousel-indicators [data-bs-target] {
+    background-color: var(--bs-body-color);
+  }
+}
+
+/* ----- Badges ----- */
+.badge {
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.badge.bg-primary { background-color: var(--bs-primary); color: var(--bs-light); }
+.badge.bg-secondary { background-color: var(--bs-secondary); color: var(--bs-light); }
+.badge.bg-warning { background-color: var(--accent-bg); color: var(--bs-body-color); }
+
+/* ----- Alert ----- */
+.alert {
+  border-radius: 0;
+  border-color: var(--bs-body-color);
+  border-left: 4px solid var(--bs-border-color);
+  background-color: var(--accent-bg);
+  color: var(--bs-body-color);
+  font-size: 0.85rem;
+  font-family: var(--bs-font-sans-serif);
+}
+
+/* ----- Breadcrumb ----- */
+.breadcrumb {
+  font-family: var(--bs-font-sans-serif);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  .breadcrumb-item a { color: var(--bs-body-color); }
+  .breadcrumb-item.active { color: var(--bs-secondary); }
+}
+
+/* ----- Accordion ----- */
+.accordion {
+  .accordion-button {
+    text-transform: uppercase;
+    font-family: var(--bs-font-sans-serif);
+    background-color: var(--bs-light);
+  }
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: var(--accent-bg);
+    color: var(--bs-body-color);
+    box-shadow: none;
+  }
+  .accordion-item {
+    border-radius: 0;
+    border-color: var(--bs-border-color);
+  }
+}
+
+/* ----- Tabs ----- */
+.nav-tabs {
+  .nav-link {
+    border-radius: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--bs-secondary);
+    border-color: transparent;
+  }
+  .nav-link:hover {
+    background-color: var(--accent-bg);
+    border-color: var(--bs-border-color);
+    color: var(--bs-body-color);
+  }
+  .nav-link.active {
+    border-color: var(--bs-border-color) var(--bs-border-color) transparent;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+  }
+}
+
+/* ----- Pagination ----- */
+.pagination {
+  .page-link {
+    border-radius: 0;
+    font-size: 0.75rem;
+    font-family: var(--bs-font-sans-serif);
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: var(--bs-border-color);
+  }
+  .page-link:hover, .page-link:focus{
+    background-color: var(--bs-light);
+    color: var(--bs-body-color);
+    box-shadow: none;
+  }
+  .page-item.active .page-link {
+    background-color: var(--bs-primary);
+    color: var(--bs-body-bg);
+  }
+  .page-item.disabled .page-link {
+    background-color:#6b645964;
+  }
+}
+
+/* ----- Modal ----- */
+.modal {
+  .modal-content {
+    border-radius: 0;
+    border: 1px solid var(--bs-border-color);
+    background-color: var(--bs-body-bg);
+  }
+  .modal-header {
+    border-bottom: 1px solid var(--bs-border-color);
+    background-color: var(--bs-light);
+    font-family: var(--bs-font-sans-serif);
+    text-transform: uppercase;
+  }
+}
+
+/* ----- Buttons ----- */
+.btn {
+  border-radius: 0;
+  font-family: var(--bs-font-sans-serif);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #111;
+  border-color: #111;
+  color: #fcfaf9;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #fcfaf9;
+  border-color: #111;
+  color: #111;
+}
+
+.btn-outline-primary {
+  border-color: #111;
+  color: #111;
+}
+
+.btn-outline-primary:hover {
+  background-color: #111;
+  color: #fcfaf9;
+}
+
+.btn-outline-secondary {
+  border-color: #6b6459;
+  color: #6b6459;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6b6459;
+  color: #fcfaf9;
+}
+
+/* ----- Tooltip ----- */
+.tooltip-inner {
+  border-radius: 0;
+  background-color: #111;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 0.75rem;
+}
+
+/* ----- Collapse ----- */
+.collapse-toggle {
+  font-family: var(--bs-font-sans-serif);
+  text-transform: uppercase;
+}
+
+/* ----- Footer ----- */
+.site-footer {
+  background-color: #111;
+  color: #fcfaf9;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 1.5rem 0;
+  border-top: 3px double #fcfaf9;
+}
+
+/* ----- Utility ----- */
+.highlight-bg { background-color: var(--accent-bg); }
+.white-bg { background-color: white; }
+.ink-border { border: 1px solid var(--bs-border-color); }
+.font-title { font-family: var(--bs-font-sans-serif); }
