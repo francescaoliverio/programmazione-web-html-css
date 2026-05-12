@@ -9,24 +9,19 @@
 /* Import font Poppins: 300,400,900 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;900&display=swap');
 
-/* Box-sizing */
+/* general settings */
 *, *::before, *::after {
   box-sizing: inherit;
   margin: 0;
 }
 html {
   box-sizing: border-box;
-}
-
-/* ----- Typography ----- */
-html {
   font-family: "Poppins", sans-serif;
 }
 p {
   margin: 1em 0;
 }
-
-/* ----- Flex containers (page layout) ----- */
+/* containers */
 body {
   padding: 3rem;
   display: flex;
@@ -42,6 +37,7 @@ main {
   flex-direction: column;
   justify-content: center;
 }
+/* buttons */
 button {
   padding: 10px 20px;
   font: inherit;
@@ -55,13 +51,16 @@ button {
 button:hover {
   background-color: darkslateblue;
 }
+/* anchors */
 a, a:visited {
   color: slateblue;
 }
 a:hover, a:focus {
   color: darkslateblue;
 }
-/* ----- Video Card Component ----- */
+/* ================================ */
+/* ===== video card component ===== */
+/* ================================ */
 div.video-card {
   margin: 2rem 0;
   padding: 2rem;
@@ -73,16 +72,24 @@ div.video-card {
     display: inline-block;
   }
   img {
-    width: 200px;
+    width: 300px;
     display: block;
   }
   .play-overlay {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #0003; display: none; align-items: center;
-    justify-content: center; color: white; font-size: 14px;
+    background: #0005;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+  }
+  /* show play-overlay when img-wrapper:hover  */
+  .img-wrapper:hover .play-overlay {
+    display: flex;
   }
 }
